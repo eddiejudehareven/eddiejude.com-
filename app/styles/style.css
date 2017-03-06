@@ -1,0 +1,28 @@
+/* files like mixins, variables, and global rules must be listed before the pages that use their codes */
+@import "normalize.css";
+@import "modules/_variables";
+@import "modules/_mixins";
+@import "modules/_header";
+@import "modules/_global";
+@import "modules/_btn";
+@import "modules/_headline";
+@import "modules/_wrapper";
+@import "modules/_row";
+@import "modules/_trainings";
+@import "modules/_page-section";
+@import "modules/_section-title";
+@import "modules/_generic-content-container";
+@import "modules/_faq-title";
+@import "modules/_faq-question";
+@import "modules/_training-block";
+@import "modules/_site-footer";
+@import "modules/_site-header";
+@import "modules/_nav-bar";
+@import "modules/_contact";
+@import "modules/_reveal-item";
+
+
+
+
+
+

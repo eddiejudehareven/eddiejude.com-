@@ -1,0 +1,14 @@
+.contact {
+	background-color: grey;
+	color: #FFF;
+	opacity: .8;
+	text-align: center;
+
+&__text-content {
+	position: relative;
+	left: 25%;
+	width: 50%;
+	text-align: center;
+	transform: translateY(-30%);
+}
+}

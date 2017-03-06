@@ -1,0 +1,18 @@
+.site-footer {
+	background-color: $mainBlue;
+	color: $mainGrey;
+	padding: .5rem 0;  /* padding so that the margin on the paragraph isn't visibly portruding out of the container div */
+	text-align: center; 
+
+&__text {
+	display: block;
+	margin-bottom: 1rem;
+	font-weight: 200;
+
+@mixin atMedium { /*when a screen is considered medium the get in touch button will no longer drop to its own line. will align next to text */
+	display: inline;
+	margin-bottom: 0;
+	margin-right: 1.4rem;
+}
+}
+}

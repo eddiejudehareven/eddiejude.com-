@@ -1,0 +1,38 @@
+.headline {
+
+	font-weight: 300;
+	font-size: 1.8rem;
+	color: $mainGrey;
+	opacity: .8;
+
+	@mixin atSmall {
+		font-size: 2.55rem;
+		font-weight: 400;
+		opacity: .8rem;
+		color: $mainGrey;
+	}
+
+&--center {
+	text-align: center;
+}
+
+&--small {
+	font-size: 1.5rem;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+
+	@mixin atMedium {
+	font-size: 2.0rem;
+	}
+}
+
+&--light {
+	font-weight: 300;
+}
+
+&--no-top-margin {  /* so no top margin appears on small screens */
+	margin-top: 0;
+}
+
+}

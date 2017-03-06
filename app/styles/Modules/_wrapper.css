@@ -1,0 +1,39 @@
+.wrapper { /*wrapper ensures same padding, margin and max width for all parts of the page targeted. can be re-used*/
+	padding-left: 40px;
+	padding-right: 40px;
+	max-width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+&--no-padding-until-medium { 
+	padding-left: 0px;
+	padding-right: 0px;
+
+	@mixin atMedium {
+	padding-left: 40px;
+	padding-right: 40px;
+
+	}
+}
+
+&--no-padding-until-large { 
+	padding-left: 0px;
+	padding-right: 0px;
+
+	@mixin atLarge {
+	padding-left: 40px;
+	padding-right: 40px;
+
+	}
+}
+
+}
+
+.wrapper { /* for wrappers nested within other wrappers*/
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 10;
+	padding-right: 10;
+
+}

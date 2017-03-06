@@ -1,0 +1,16 @@
+body {
+	font-family: 'Raleway','Assistant','Roboto', sans-serif;  
+	color: $mainGrey;
+}
+
+img {
+	max-width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: $mainMagenta;
+}
