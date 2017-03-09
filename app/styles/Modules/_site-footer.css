@@ -1,8 +1,9 @@
 .site-footer {
-	background-color: $mainBlue;
-	color: $mainGrey;
+	background-color: black;
+	color: white;
 	padding: .5rem 0;  /* padding so that the margin on the paragraph isn't visibly portruding out of the container div */
 	text-align: center; 
+	font-size: 0.8rem;
 
 &__text {
 	display: block;

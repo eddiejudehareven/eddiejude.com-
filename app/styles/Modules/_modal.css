@@ -1,0 +1,49 @@
+.modal {
+	position: fixed;
+	z-index: 5;
+	background-color: rgba(255, 255, 255, .94);
+	top: 0;  /* so image takes up entire screen */ 
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0; /* hides modal overlay until clicked */ 
+	visibility: hidden; /* hides modal overlay until clicked */ 
+	transform: scale(1.2);
+	transition: all .3 ease-out; 
+
+	&__is-visible {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	&__inner {
+		position: absolute;
+		width: 100%; /* so width is not shrunken by position aboslute */ 
+		top: 50%; /* pushes div down 50% of the page */
+		transform: translateY(-50%); /* pushes it back up 50% */ 
+	}
+
+	&__description {
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+
+	&__close {
+		position: absolute; /* to move X to the top right position */ 
+		top: 15px; /* to move X to the top right position */
+		right: 15px;
+		font-size: 2rem;
+		transform: scaleX(1.2); /* stretches X out horizontally */ 
+		transform-origin: 100% 0; /* stretches X out */
+		color: $mainPurple;
+		cursor: pointer; /* makes mouse turn to a pointer */ 
+
+		&:hover { /* X changes color when hovered over */ 
+			color: $mainGold;
+	}
+}
+
+}

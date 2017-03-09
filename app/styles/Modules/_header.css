@@ -1,5 +1,5 @@
 .header {
-	border-bottom: 10px solid $mainOrange;
+	border-bottom: 10px solid $mainPurple;
 	position: relative;
 
 &__image {
@@ -24,7 +24,7 @@
 }
 
 @mixin atLarge {
-	transform: translateY(-60%);
+	transform: translateY(-40%);
 }
 }
 

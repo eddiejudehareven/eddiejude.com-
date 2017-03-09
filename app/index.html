@@ -4,48 +4,46 @@
 	<title>Eddie Jude</title>
 
 <link rel="stylesheet" href="temp/styles/style.css">
+<script src="/temp/scripts/Vendor.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Raleway|Assistant" rel="stylesheet">
 </head>
 <body>
 <div id="top"></div>
 <header class="site-header">
 <div class="wrapper">
-<h1 class="site-header__title">Eddie Jude Hareven</h1>
+<h1 class="site-header__title">v</h1>
 <div class="nav-bar__menu-icon">
 	<div class="nav-bar__menu-icon__middle"></div>
 </div>
-<div class="site-header__btn-container">
-	<a href="#" class="btn">Work with Me!</a>
 	</div>
-
 	<nav class="nav-bar nav-bar--pull-right">
 		<ul>
-			<li><a href="#section-one">About</a></li>
-			<li><a href="#section-two">Consultations &amp Trainings</a></li>
-			<li><a href="#section-three">FAQ</a></li>
+			<li><a href="#section-one" id="About-me-link">ABOUT</a></li>
+			<li><a href="#section-two" id="Consultations-and-Trainings-link">CONSULTATIONS & TRAININGS</a></li>
+			<li><a href="#section-three" id="FAQ-link">FAQ</a></li>
+			<li><a href="#section-four" id="contact-link">WORK WITH ME</a></li>
 		</ul>
 	</nav>
 	</div>
 	</div>
 </div>
-</header>
+</header>3500
 
 <div class="header">
 <picture>
-	<source srcset="images/header1-large-hi-dpi.jpg 3840w, images/header1-large.jpg 3500w " media="(min-width: 1300px)">
-	<source srcset="images/header1-medium.jpg 2800w, images/header1-medium.jpg 2500w" media="(min-width: 760px)">
-	<img src="images/header1-small.jpg" alt="greenhouse and flowers" class="header__image">
+	<source srcset="images/header2-large-hi-dpi.jpg 3840w, images/header2-large.jpg 3500w " media="(min-width: 1300px)">
+	<source srcset="images/header2-medium-hi-dpi.jpg 2800w, images/header2-medium.jpg 2500w" media="(min-width: 760px)">
+	<img src="images/header2-small.jpg" alt="greenhouse and flowers" class="header__image">
 </picture>
 </div>
 
 <div class="header__text-content">
-<h1 class="header__title"></h1>
 <h2 class="header__subtitle">Community Facilitator &amp Educator</h2>
-<p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
+<p><a href="#" class="btn btn--orange btn--large open-modal">Get Started Today</a></p>
 </div>
 	</div>
 <div id="section-one">
-	<div id="About Me" class="page-section">
+	<div id="About Me" class="page-section" data-matching-link="#About-me-link">
 		<div class="wrapper">
 		<h2 class="headline headline--center"><strong>Trained Facilitator and Community Educator</strong></h2>
 	
@@ -72,7 +70,7 @@
 </div>
 </div>
 
-<div id="section-two">
+<div id="section-two" data-matching-link="#Consultations-and-Trainings-link">
 <div id="Services I Offer" class="page-section page-section--trainings page-section--no-padding-top-until-large">
 <div class="wrapper wrapper--no-padding-until-large">
 	<h2 class="section-title section-title--grey">Available<strong>Trainings</strong></h2>
@@ -106,9 +104,9 @@
 </div>
 </div>
 
-<div id="section-three">
-<div id="Work With Me">
-<div class=wrapper>
+<div id="section-three" data-matching-link="#FAQ-link">
+<div id="Work With Me" class="page-section">
+<div class="wrapper">
     <h2 class="faq-title">Frequently Asked <strong>Questions</strong></h2>
 <div class="row row--gutters generic-content-container">
 
@@ -144,21 +142,36 @@
 </div>
 	</div>
 </div>
-
+<div id="section-four">
 <div class="contact">
 	<div class="wrapper">
 	<h3 class="faq-title">Working<strong>Together</strong></h3>
 	<div class="contact__text-content">
     <p>Ready to book a training or interested in learning more about myself or my process? Give me a shout and tell me a bit about your team and what you're looking for.</p>
     </div>
-    <a href="#" class="btn btn--orange btn--orange-footer">Get in Touch</a></a>
+    <a href="#" class="btn btn--orange btn--orange-footer open-modal">Get in Touch</a></a>
     	</div>
+    </div>
     </div>
     
    </div>
 
    <footer class="site-footer">
    <div class="wrapper"><span class="site-footer__text">&copy 2017 Eddie Jude Hareven</span></footer></div>
+
+<div class="btn btn__menu">MENU</div>
+   <div class ="modal">
+   	<div class="modal__inner">
+   	<h2 class="section-title section-title--grey section-title--less-margin">Sweet! <strong>Lets get started!</strong></h2>
+   	<div class="wrapper wrapper--narrow">
+   	<p class="modal__description">contact info here.</p></div>
+   	<div class="social-icons">
+   		<a href="#" class="social-icons__icon"><span class="icon icon--email"></span></a>
+   		<a href="#" class="social-icons__icon"><span class="icon icon--linkedin"></span></a>
+   		</div>
+   	</div>
+   	<div class="modal__close">X</div>
+   	</div>
    <script src="/temp/scripts/App.js"></script>
 </body>
 </html>

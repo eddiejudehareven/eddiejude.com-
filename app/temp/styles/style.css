@@ -366,7 +366,7 @@ template {
   display: none;
 }
 .header {
-	border-bottom: 10px solid #e5760b;
+	border-bottom: 10px solid #945779;
 	position: relative;
 }
 .header__image {
@@ -396,8 +396,8 @@ template {
 }
 @media (min-width: 1010px) {
   .header__text-content {
-    -webkit-transform: translateY(-60%);
-            transform: translateY(-60%);
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
   }
 }
 .header__subtitle {
@@ -446,7 +446,7 @@ img {
 	box-sizing: border-box;
 }
 a {
-	color: #a62041;
+	color: #945779;
 }
 .btn {
 	background-color: #a62041; 
@@ -455,8 +455,21 @@ a {
 	padding: .75rem 1.2rem;
 	display: inline-block;
 }
+.btn__menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #d05493;
+  background-color: black;
+  font-size: 1rem;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  cursor: pointer;
+  text-decoration: none;
+  padding: .75rem 1.1rem;
+}
 .btn--orange {
-  background-color: #e5760b;
+  background-color: #945779;
 }
 .btn--orange-footer {
   float: center;
@@ -477,7 +490,6 @@ a {
 	font-size: 1.8rem;
 	color: #242424;
 	opacity: .8;
-	position: fixed;
 
 }
 @media (min-width: 530px) {
@@ -526,6 +538,9 @@ a {
     padding-left: 40px;
     padding-right: 40px;
   }
+}
+.wrapper--no-padding-until-medium--narrow {
+  max-width: 470px;
 }
 .wrapper--no-padding-until-large {
   padding-left: 0px;
@@ -643,10 +658,10 @@ a {
   }
 }
 .page-section--trainings {/* background color for section */
-  background-color: #e7f1fa;
+  background-color: #945779;
   color: #000;
-  border-top: 10px solid #2f5572;
-  border-bottom: 10px solid #2f5572;
+  border-top: 10px solid #d05493;
+  border-bottom: 10px solid #d05493;
 }
 .section-title { /* reusable block for all section titles*/
 	font-size: 2.55rem;
@@ -661,6 +676,10 @@ a {
 .section-title--grey {
   color: #242424;
   opacity: .8;
+}
+.section-title--less-margin {
+  margin-bottom: 1.3rem;
+  margin-top: 0rem;
 }
 .generic-content-container p {
   font-weight: 300;
@@ -741,10 +760,11 @@ a {
   }
 }
 .site-footer {
-	background-color: #e7f1fa;
-	color: #242424;
+	background-color: black;
+	color: white;
 	padding: .5rem 0;  /* padding so that the margin on the paragraph isn't visibly portruding out of the container div */
-	text-align: center;
+	text-align: center; 
+	font-size: 0.8rem;
 }
 .site-footer__text {
   display: block;
@@ -761,7 +781,7 @@ a {
 .site-header {
 	position: absolute; /* brings up header image so that header can be placed over top */
 	width: 100%;
-	height: 10%;
+	height: 5%;
 	z-index: 1; /*bring header to front. whatever element has a higher z index will be layered on top*/
 	padding: 10px 0;
 	-webkit-transition: background-color .3s ease-out;
@@ -774,11 +794,11 @@ a {
 }
 @media (min-width: 800px) {
   .site-header {
-    background-color: rgba(231, 241, 250, .8);/* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
+    background-color: black;/* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
     position: fixed;/* sticky header */
   }
   .site-header--dark {
-    background-color: rgba(198, 206, 214, .8);
+    background-color: black;
   }
 }
 .site-header__btn-container {
@@ -793,22 +813,30 @@ a {
   }
 }
 .site-header__title {
-  text-align: center;
+  text-align: right;
   font-weight: 900;
   font-size: 2rem;
   opacity: 0.8;
   -webkit-transform: translateY(-20%);
           transform: translateY(-20%);
+  -webkit-transition: -webkit-transform .5 ease-out;
+  transition: -webkit-transform .5 ease-out;
+  transition: transform .5 ease-out;
+  transition: transform .5 ease-out, -webkit-transform .5 ease-out;
 }
+/* so title smoothly transitions to fade out */
 @media (min-width: 800px) {
   .site-header__title {
     text-align: left;
     font-weight: 900;
     text-align: left;
     font-size: 1.5rem;
-    opacity: 0.8;
-    -webkit-transform: translateY(-40%);
-            transform: translateY(-40%);
+    opacity: 1;
+    -webkit-transform: translateY(-0%);
+            transform: translateY(-0%);
+  }
+  .site-header--dark .site-header__title {
+    opacity: 0;
   }
 }
 .nav-bar {
@@ -826,6 +854,7 @@ a {
             transform: scale(1);
     z-index: 1;
     padding-top: 0;
+    visibility: hidden;
   }
 }
 .nav-bar--is-visible {
@@ -835,11 +864,16 @@ a {
   z-index: 1;/* so hidden content now gets pushed to the front when visible */
 }
 .nav-bar--pull-right {/* modifier for nav bar items that should float right */
-  float: right;
+  float: left;
+}
+@media (min-width: 530px) {
+  .nav-bar--pull-right {
+    float: right;
+  }
 }
 .nav-bar ul {/* parent of li */
   margin: 0;
-  padding: 0;/* clears floats */
+  padding-left: 30px;/* clears floats */
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
 }
@@ -859,25 +893,41 @@ a {
   .nav-bar li {
     float: left;
     display: block;
-    text-align: right;
+    text-align: left;
     padding-right: 20px;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
 }
 .nav-bar a {/*targets any links */
-  color: #a62041;
+  position: relative;
+  top: 108px;
+  background-color: black;
+  color: #945779;
   font-weight: 300;
   text-decoration: none;/* gets rid of underlines */
   display: block;/* turns links into block element */
-  padding: 5px 8px;
+  padding: 15px 15px;
   font-size: .8rem;
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+}
+.nav-bar a:hover {
+  color: #eeab26;
 }
 @media (min-width: 800px) {
   .nav-bar a {
+    position: relative;
+    top: 50px;
+    color: white;
     padding: 10px 0;
-    font-size: 1rem;
+    font-size: .8rem;
     background-color: transparent;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  .nav-bar a $.is-current-link {
+    color: #fabb69;
   }
 }
 .nav-bar__menu-icon {
@@ -952,7 +1002,7 @@ a {
           transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 }
 .contact {
-	background-color: grey;
+	background-color: #eeab26;
 	color: #FFF;
 	opacity: .8;
 	text-align: center;
@@ -973,7 +1023,67 @@ a {
 .reveal-item--is-visible {
   opacity: 1;
 }
+.modal {
+	position: fixed;
+	z-index: 5;
+	background-color: rgba(255, 255, 255, .94);
+	top: 0;  /* so image takes up entire screen */ 
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0; /* hides modal overlay until clicked */ 
+	visibility: hidden; /* hides modal overlay until clicked */ 
+	-webkit-transform: scale(1.2); 
+	        transform: scale(1.2);
+	-webkit-transition: all .3 ease-out;
+	transition: all .3 ease-out;
 
+}
+.modal__is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.modal__inner {
+  position: absolute;
+  width: 100%;/* so width is not shrunken by position aboslute */
+  top: 50%;/* pushes div down 50% of the page */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);/* pushes it back up 50% */
+}
+.modal__description {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.65;
+}
+.modal__close {
+  position: absolute;/* to move X to the top right position */
+  top: 15px;/* to move X to the top right position */
+  right: 15px;
+  font-size: 2rem;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);/* stretches X out horizontally */
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;/* stretches X out */
+  color: #945779;
+  cursor: pointer;
+}
+/* makes mouse turn to a pointer */
+.modal__close:hover {/* X changes color when hovered over */
+  color: #eeab26;
+}
+.social-icons {
+	text-align: center;
+}
+.social-icons__icon {
+  background-color: #eeab26;
+  display: inline-block;
+}
+.social-icons__icon .icon {
+  display: block;
+}
 
 
 

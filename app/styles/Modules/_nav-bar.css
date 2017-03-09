@@ -8,8 +8,9 @@
 		transform: scale(1);
 		z-index: 1;
 		padding-top: 0;
-
+		visibility: hidden;
 	}
+
 
 &--is-visible {
 	opacity: 1;
@@ -18,12 +19,17 @@
 }
 
 &--pull-right { /* modifier for nav bar items that should float right */
-	float: right;
+	float: left;
+
+	@mixin atSmall {
+		float: right;
+
+	}
 }
 
 ul { /* parent of li */
 	margin: 0;
-	padding: 0;
+	padding-left: 30px;
 	@mixin clearfix; /* clears floats */
 	transform: translateY(-150%)
 }
@@ -37,24 +43,39 @@ li {
 	@mixin atMedium {
 		float: left;
 		display: block;
-		text-align: right;
+		text-align: left;
 		padding-right: 20px;
 		transform: translateY(0%);
 	}
 }
 
 a { /*targets any links */
-	color: $mainMagenta;
+	position: relative;
+	top: 108px;
+	background-color: black;
+	color: $mainPurple;
 	font-weight: 300;
 	text-decoration: none; /* gets rid of underlines */
 	display: block; /* turns links into block element */
-	padding: 5px 8px;
+	padding: 15px 15px;
 	font-size: .8rem;
+	transform: translateX(-25%);
 
+	&:hover {
+		color: $mainGold;
+}
 	@mixin atMedium {
+		position: relative;
+		top: 50px;
+		color: white;
 		padding: 10px 0;
-		font-size: 1rem;
+		font-size: .8rem;
 		background-color: transparent;
+		transform: translateY(-200%);
+
+		$.is-current-link {
+			color: #fabb69;
+		}
 
 	}
 }
