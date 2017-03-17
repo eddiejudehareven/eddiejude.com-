@@ -62,17 +62,12 @@
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
-	var _Menu = __webpack_require__(7);
-
-	var _Menu2 = _interopRequireDefault(_Menu);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var mobileMenu = new _MobileMenu2.default(); /* var = object = new = person class -- creates new instance of the class */
 	var revealOnScroll = new _revealOnScroll2.default();
 	var stickyHeader = new _StickyHeader2.default();
 	var modal = new _Modal2.default();
-	var menu = new _Menu2.default();
 
 /***/ },
 /* 1 */
@@ -11302,62 +11297,6 @@
 	}();
 
 	exports.default = Modal; // exports to main JS file //
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _jquery = __webpack_require__(2);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var Menu = function () {
-		function Menu() {
-			_classCallCheck(this, Menu);
-
-			this.openMenuButton = (0, _jquery2.default)(".btn__menu");
-			this.menu = (0, _jquery2.default)(".nav-bar");
-			this.closeMenuButton = (0, _jquery2.default)(".btn__menu");
-			this.events();
-		}
-
-		_createClass(Menu, [{
-			key: "events",
-			value: function events() {
-				// clicking menu button will make menu visible 
-				this.openMenuButton.click(this.openMenu.bind(this));
-				// clicking the menu button again will make menu invisible 
-				this.closeMenuButton.click(this.closeMenu.bind(this));
-				//
-			}
-		}, {
-			key: "openMenu",
-			value: function openMenu() {
-				this.nav - bar.addClass("nav-bar__menu-is-visible");
-			}
-		}, {
-			key: "closeMenu",
-			value: function closeMenu() {
-				this.nav - bar.removeClass("nav-bar__menu-is-invisible");
-			}
-		}]);
-
-		return Menu;
-	}();
-
-	exports.default = Menu;
 
 /***/ }
 /******/ ]);
