@@ -30,21 +30,25 @@ ul { /* parent of li */
 	margin: 0;
 	padding-left: 30px;
 	@mixin clearfix; /* clears floats */
-	transform: translateY(-150%)
+	transform: translateY(-220%);
 }
 
 li {
 	list-style: none; /* gets rid of bullet points */
 	display: inline-list-item;
 	text-align: right;
-	transform: translateY(150%);
+	transform: translateY(450%);
 
 	@mixin atMedium {
 		float: left;
 		display: block;
 		text-align: left;
 		padding-right: 20px;
-		transform: translateY(0%);
+		transform: translateY(-140%);
+	}
+
+	@mixin atLarge {
+		transform: translateY(-60%);
 	}
 }
 
@@ -58,7 +62,7 @@ a { /*targets any links */
 	display: block; /* turns links into block element */
 	padding: 15px 15px;
 	font-size: .8rem;
-	transform: translateX(-25%);
+	transform: translateX(-20%);
 
 	&:hover {
 		color: $mainGold;

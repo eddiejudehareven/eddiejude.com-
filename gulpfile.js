@@ -7,7 +7,8 @@ cssnested = require('postcss-nested'),
 cssImport = require('postcss-import'),
 browserSync = require('browser-sync').create(),
 mixins = require('postcss-mixins'),
-webpack = require('webpack');
+webpack = require('webpack'),
+imagemin = require('gulp-imagemin');
 
 gulp.task('default', function(){
 	console.log('hurray');
@@ -66,6 +67,7 @@ gulp.task('scripts', function(callback) {
 	}); */
 
 });
+
 
 
 

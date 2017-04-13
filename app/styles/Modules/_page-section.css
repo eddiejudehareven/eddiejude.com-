@@ -25,8 +25,9 @@
 &--trainings {  /* background color for section */
 	background-color: $mainPurple;
 	color: #000;
-	border-top: 10px solid $mainPink;
-	border-bottom: 10px solid $mainPink;
-}
 
+&--top-border {
+	border-top: 10px solid $mainPink;
+}
+}
 }

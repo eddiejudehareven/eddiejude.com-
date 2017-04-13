@@ -6,6 +6,30 @@
 	padding: 10px 0;
 	transition: background-color .3s ease-out;
 
+&--arrow-tab {
+	float: right;
+	position: relative;
+	display: block;
+	z-index: 0;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	color: white;
+	transform: translateY(40%);
+}
+
+&--arrow-tab::after { /* makes triangle */ 
+	content: "";
+	position: absolute;
+	top: 100%;
+	background-color: black;
+	width: 150px;
+	height: 50px;
+	transform: translateX(-70%);
+
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
 &--is-expanded {
 	height: 15%;
 	background-color: ;
@@ -33,20 +57,24 @@
 }
 
 &__title {
-	text-align: right;
-	font-weight: 900;
+	color: $mainGrey; 
+	text-align: left;
+	font-weight: 500;
 	font-size: 2rem;
 	opacity: 0.8;
 	transform: translateY(-20%);
 	transition: transform .5 ease-out;  /* so title smoothly transitions to fade out */ 
 
 @mixin atMedium {
+	background-color: white;
+	border: 2px solid #e8e9ea; /* how do you space the border? */
+	width: 15%;
+	padding:20px;
 	text-align: left;
 	font-weight: 900;
-	text-align: left;
 	font-size: 1.5rem;
 	opacity: 1;
-	transform: translateY(-0%);
+	transform: translateY(-25%);
 
 	.site-header--dark & {
 		opacity: 0;

@@ -384,14 +384,14 @@ template {
 }
 @media (min-width: 530px) {
   .header__text-content {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
   }
 }
 @media (min-width: 800px) {
   .header__text-content {
-    -webkit-transform: translateY(-120%);
-            transform: translateY(-120%);
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%);
   }
 }
 @media (min-width: 1010px) {
@@ -454,19 +454,6 @@ a {
 	text-decoration: none;
 	padding: .75rem 1.2rem;
 	display: inline-block;
-}
-.btn__menu {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  color: #d05493;
-  background-color: black;
-  font-size: 1rem;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  cursor: pointer;
-  text-decoration: none;
-  padding: .75rem 1.1rem;
 }
 .btn--orange {
   background-color: #945779;
@@ -634,7 +621,6 @@ a {
 .page-section { /* add margin between page sections */
 	padding: 1rem 0;
 	background-color: #e7f1fa;
-
 }
 @media (min-width: 800px) {
   .page-section {
@@ -660,8 +646,9 @@ a {
 .page-section--trainings {/* background color for section */
   background-color: #945779;
   color: #000;
+}
+.page-section--trainings--top-border {
   border-top: 10px solid #d05493;
-  border-bottom: 10px solid #d05493;
 }
 .section-title { /* reusable block for all section titles*/
 	font-size: 2.55rem;
@@ -734,13 +721,11 @@ a {
 	background-color: rgba(255, 255, 255, .8);
 	padding: 1px 1.8125rem 1px 1.8125rem;
 	border-radius: 10px;
-	border: 0px solid #2f5572;
 	margin-bottom: 20px;
 }
 /*creates bottom margin for single stacked columns on small screens */
 @media (min-width: 800px) {
   .training-block {/* ensures no bottom margin on larger screens */
-    border: 0px solid #2f5572;
     margin-bottom: 20px;
   }
 }
@@ -760,23 +745,40 @@ a {
   }
 }
 .site-footer {
+	position: relative;
 	background-color: black;
 	color: white;
 	padding: .5rem 0;  /* padding so that the margin on the paragraph isn't visibly portruding out of the container div */
-	text-align: center; 
-	font-size: 0.8rem;
+	text-align: left; 
+	font-size: 0.7rem;
+
 }
-.site-footer__text {
-  display: block;
-  margin-bottom: 1rem;
-  font-weight: 200;
+.site-footer ul {/* parent of li */
+  margin: 0;
+  padding-left: 30px;/* clears floats */
 }
-@media (min-width: 800px) {
-  .site-footer__text {/*when a screen is considered medium the get in touch button will no longer drop to its own line. will align next to text */
-    display: inline;
-    margin-bottom: 0;
-    margin-right: 1.4rem;
-  }
+.site-footer ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.site-footer li {
+  list-style: none;/* gets rid of bullet points */
+  display: inline;
+}
+.site-footer a {/*targets any links */
+  position: relative;
+  color: #FFF;
+  font-size: 0.7rem;
+  text-decoration: none;/* gets rid of underlines */
+  display: block;/* turns links into block element */
+  padding: 5px 5px;
+}
+.site-footer a:hover {
+  color: #eeab26;
+}
+.site-footer__text-content {
+  position: relative;
 }
 .site-header {
 	position: absolute; /* brings up header image so that header can be placed over top */
@@ -786,6 +788,30 @@ a {
 	padding: 10px 0;
 	-webkit-transition: background-color .3s ease-out;
 	transition: background-color .3s ease-out;
+}
+.site-header--arrow-tab {
+  float: right;
+  position: relative;
+  display: block;
+  z-index: 0;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  color: white;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+.site-header--arrow-tab::after {/* makes triangle */
+  content: "";
+  position: absolute;
+  top: 100%;
+  background-color: black;
+  width: 150px;
+  height: 50px;
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 .site-header--is-expanded {
   height: 15%;
@@ -813,8 +839,9 @@ a {
   }
 }
 .site-header__title {
-  text-align: right;
-  font-weight: 900;
+  color: #242424;
+  text-align: left;
+  font-weight: 500;
   font-size: 2rem;
   opacity: 0.8;
   -webkit-transform: translateY(-20%);
@@ -827,13 +854,16 @@ a {
 /* so title smoothly transitions to fade out */
 @media (min-width: 800px) {
   .site-header__title {
+    background-color: white;
+    border: 2px solid #e8e9ea;/* how do you space the border? */
+    width: 15%;
+    padding: 20px;
     text-align: left;
     font-weight: 900;
-    text-align: left;
     font-size: 1.5rem;
     opacity: 1;
-    -webkit-transform: translateY(-0%);
-            transform: translateY(-0%);
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
   }
   .site-header--dark .site-header__title {
     opacity: 0;
@@ -873,8 +903,8 @@ a {
 .nav-bar ul {/* parent of li */
   margin: 0;
   padding-left: 30px;/* clears floats */
-  -webkit-transform: translateY(-150%);
-          transform: translateY(-150%);
+  -webkit-transform: translateY(-220%);
+          transform: translateY(-220%);
 }
 .nav-bar ul::after {
   content: "";
@@ -885,8 +915,8 @@ a {
   list-style: none;/* gets rid of bullet points */
   display: inline-list-item;
   text-align: right;
-  -webkit-transform: translateY(150%);
-          transform: translateY(150%);
+  -webkit-transform: translateY(450%);
+          transform: translateY(450%);
 }
 @media (min-width: 800px) {
   .nav-bar li {
@@ -894,8 +924,14 @@ a {
     display: block;
     text-align: left;
     padding-right: 20px;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    -webkit-transform: translateY(-140%);
+            transform: translateY(-140%);
+  }
+}
+@media (min-width: 1010px) {
+  .nav-bar li {
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
   }
 }
 .nav-bar a {/*targets any links */
@@ -908,8 +944,8 @@ a {
   display: block;/* turns links into block element */
   padding: 15px 15px;
   font-size: .8rem;
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
 }
 .nav-bar a:hover {
   color: #eeab26;

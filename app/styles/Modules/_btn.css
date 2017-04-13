@@ -6,19 +6,6 @@
 	padding: .75rem 1.2rem;
 	display: inline-block;
 
-&__menu {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	color: $mainPink;
-	background-color: black;
-	font-size: 1rem;
-	transform: translateY(50%);
-	cursor: pointer;
-	text-decoration: none;
-	padding: .75rem 1.1rem;
-}
-
 &--orange {
 	background-color: $mainPurple;
 }
