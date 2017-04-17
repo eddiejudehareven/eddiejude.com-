@@ -368,6 +368,20 @@ template {
 .header {
 	border-bottom: 10px solid #945779;
 	position: relative;
+
+/*&__description {
+	color: #FFF;
+	font-size: 1.1rem;
+	font-weight: 100;
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+	max-width: 30rem;
+	margin-left: auto;
+	margin-right: auto;
+
+@mixin atSmall {
+	font-size: 1.875rem;
+}	
+}*/
 }
 .header__image {
   display: block;
@@ -376,31 +390,12 @@ template {
 .header__text-content {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-150%);
-          transform: translateY(-150%);
   left: 0;
   width: 100%;
   text-align: center;
 }
-@media (min-width: 530px) {
-  .header__text-content {
-    -webkit-transform: translateY(-150%);
-            transform: translateY(-150%);
-  }
-}
-@media (min-width: 800px) {
-  .header__text-content {
-    -webkit-transform: translateY(-80%);
-            transform: translateY(-80%);
-  }
-}
-@media (min-width: 1010px) {
-  .header__text-content {
-    -webkit-transform: translateY(-40%);
-            transform: translateY(-40%);
-  }
-}
 .header__subtitle {
+  text-align: center;
   font-weight: 900;
   font-size: 2rem;
   margin: 0;
@@ -419,20 +414,6 @@ template {
 @media (min-width: 1010px) {
   .header__subtitle {
     font-size: 4.0rem;
-  }
-}
-.header__description {
-  color: #FFF;
-  font-size: 1.1rem;
-  font-weight: 100;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-  max-width: 30rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (min-width: 530px) {
-  .header__description {
-    font-size: 1.875rem;
   }
 }
 body {
@@ -790,28 +771,48 @@ a {
 	transition: background-color .3s ease-out;
 }
 .site-header--arrow-tab {
+  opacity: 0;
   float: right;
   position: relative;
   display: block;
   z-index: 0;
+  bottom: 10px;
   width: 10px;
   height: 10px;
   background-color: black;
-  color: white;
-  -webkit-transform: translateY(40%);
-          transform: translateY(40%);
+}
+/*transform: translateY(40%);*/
+@media (min-width: 800px) {
+  .site-header--arrow-tab {
+    opacity: 1;
+  }
 }
 .site-header--arrow-tab::after {/* makes triangle */
   content: "";
   position: absolute;
   top: 100%;
   background-color: black;
-  width: 150px;
+  width: 130px;
   height: 50px;
   -webkit-transform: translateX(-70%);
           transform: translateX(-70%);
   -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.site-header--arrow-text {
+  opacity: 0;
+  float: right;
+  position: relative;
+  display: block;
+  color: white;
+  z-index: 1;
+  right: 5px;
+  top: 5px;
+}
+@media (min-width: 800px) {
+  .site-header--arrow-text {
+    opacity: 1;
+  }
 }
 .site-header--is-expanded {
   height: 15%;
@@ -819,8 +820,7 @@ a {
   opacity: 1;
 }
 @media (min-width: 800px) {
-  .site-header {
-    background-color: black;/* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
+  .site-header {/* we're moving the black bar to its own element! *//*background-color: black;*//* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
     position: fixed;/* sticky header */
   }
   .site-header--dark {
@@ -871,9 +871,9 @@ a {
 }
 .nav-bar {
 	opacity: 0;
-	-webkit-transform: scale(1.2);
-	        transform: scale(1.2); /* makes content look bigger than it normally does/zoom out effect */ 
-	z-index: -10;
+	position: absolute;
+	top: 0;
+	right: 0;
 
 }
 /* so that hidden content doesn't get accidentally clicked on */
@@ -882,16 +882,30 @@ a {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
-    z-index: 1;
     padding-top: 0;
   }
 }
+/*z-index: -10;*/
+.nav-bar--menu-bar {
+  opacity: 0;
+  height: 30px;
+  width: 100%;
+  background-color: black;
+}
+@media (min-width: 800px) {
+  .nav-bar--menu-bar {
+    height: 10px;
+    opacity: 1;
+  }
+}
+/* makes content look bigger than it normally does/zoom out effect */
 .nav-bar--is-visible {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
   z-index: 1;/* so hidden content now gets pushed to the front when visible */
 }
+/*transform: scale(1.2);*/
 .nav-bar--pull-right {/* modifier for nav bar items that should float right */
   float: left;
 }
@@ -901,10 +915,9 @@ a {
   }
 }
 .nav-bar ul {/* parent of li */
+  display: none;
   margin: 0;
   padding-left: 30px;/* clears floats */
-  -webkit-transform: translateY(-220%);
-          transform: translateY(-220%);
 }
 .nav-bar ul::after {
   content: "";
@@ -915,8 +928,6 @@ a {
   list-style: none;/* gets rid of bullet points */
   display: inline-list-item;
   text-align: right;
-  -webkit-transform: translateY(450%);
-          transform: translateY(450%);
 }
 @media (min-width: 800px) {
   .nav-bar li {
@@ -924,19 +935,11 @@ a {
     display: block;
     text-align: left;
     padding-right: 20px;
-    -webkit-transform: translateY(-140%);
-            transform: translateY(-140%);
   }
 }
-@media (min-width: 1010px) {
-  .nav-bar li {
-    -webkit-transform: translateY(-60%);
-            transform: translateY(-60%);
-  }
-}
+@media (min-width: 1010px) {}
 .nav-bar a {/*targets any links */
   position: relative;
-  top: 108px;
   background-color: black;
   color: #945779;
   font-weight: 300;
@@ -944,8 +947,6 @@ a {
   display: block;/* turns links into block element */
   padding: 15px 15px;
   font-size: .8rem;
-  -webkit-transform: translateX(-20%);
-          transform: translateX(-20%);
 }
 .nav-bar a:hover {
   color: #eeab26;
@@ -953,13 +954,10 @@ a {
 @media (min-width: 800px) {
   .nav-bar a {
     position: relative;
-    top: 50px;
     color: white;
     padding: 10px 0;
     font-size: .8rem;
     background-color: transparent;
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
   }
   .nav-bar a $.is-current-link {
     color: #fabb69;

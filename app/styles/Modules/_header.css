@@ -10,25 +10,13 @@
  &__text-content {
 	position: absolute;
 	top: 50%;
-	transform: translateY(-150%);
 	left: 0;
 	width: 100%;
 	text-align: center;
-
-@mixin atSmall {
-	transform: translateY(-150%);
-	}
-
-@mixin atMedium {
-	transform: translateY(-80%);
-}
-
-@mixin atLarge {
-	transform: translateY(-40%);
-}
 }
 
 &__subtitle {
+	text-align: center;
 	font-weight: 900;
 	font-size: 2rem;
 	margin: 0;
@@ -47,7 +35,7 @@
 	}
 }
 
-&__description {
+/*&__description {
 	color: #FFF;
 	font-size: 1.1rem;
 	font-weight: 100;
@@ -59,5 +47,5 @@
 @mixin atSmall {
 	font-size: 1.875rem;
 }	
-}
+}*/
 }

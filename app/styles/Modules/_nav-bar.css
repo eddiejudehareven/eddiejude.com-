@@ -1,14 +1,28 @@
 .nav-bar {
 	opacity: 0;
-	transform: scale(1.2); /* makes content look bigger than it normally does/zoom out effect */ 
-	z-index: -10; /* so that hidden content doesn't get accidentally clicked on */
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*transform: scale(1.2);*/ /* makes content look bigger than it normally does/zoom out effect */ 
+	/*z-index: -10;*/ /* so that hidden content doesn't get accidentally clicked on */
 
 	@mixin atMedium {
 		opacity: 1;
 		transform: scale(1);
-		z-index: 1;
 		padding-top: 0;
 	}
+
+&--menu-bar {
+	opacity: 0;
+	height: 30px;
+	width: 100%;
+	background-color: black;
+
+	@mixin atMedium {
+		height: 10px;
+		opacity: 1;
+	}
+}
 
 
 &--is-visible {
@@ -27,34 +41,30 @@
 }
 
 ul { /* parent of li */
+	display: none;
 	margin: 0;
 	padding-left: 30px;
 	@mixin clearfix; /* clears floats */
-	transform: translateY(-220%);
 }
 
 li {
 	list-style: none; /* gets rid of bullet points */
 	display: inline-list-item;
 	text-align: right;
-	transform: translateY(450%);
 
 	@mixin atMedium {
 		float: left;
 		display: block;
 		text-align: left;
 		padding-right: 20px;
-		transform: translateY(-140%);
 	}
 
 	@mixin atLarge {
-		transform: translateY(-60%);
 	}
 }
 
 a { /*targets any links */
 	position: relative;
-	top: 108px;
 	background-color: black;
 	color: $mainPurple;
 	font-weight: 300;
@@ -62,19 +72,16 @@ a { /*targets any links */
 	display: block; /* turns links into block element */
 	padding: 15px 15px;
 	font-size: .8rem;
-	transform: translateX(-20%);
 
 	&:hover {
 		color: $mainGold;
 }
 	@mixin atMedium {
 		position: relative;
-		top: 50px;
 		color: white;
 		padding: 10px 0;
 		font-size: .8rem;
 		background-color: transparent;
-		transform: translateY(-200%);
 
 		$.is-current-link {
 			color: #fabb69;
