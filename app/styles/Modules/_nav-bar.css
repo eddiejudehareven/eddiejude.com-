@@ -22,6 +22,17 @@
 		height: 10px;
 		opacity: 1;
 	}
+
+&--displayed {
+	height: 30px;
+	width: 100%;
+
+	& nav ul {
+		display: block;
+	}
+
+}
+
 }
 
 
@@ -44,7 +55,10 @@ ul { /* parent of li */
 	display: none;
 	margin: 0;
 	padding-left: 30px;
+
 	@mixin clearfix; /* clears floats */
+
+
 }
 
 li {
@@ -156,4 +170,11 @@ a { /*targets any links */
 	}
 
 }
+
+
+/* figure out how to select child of ul in post-css */
+/*.nav-bar--menu-bar--displayed nav ul {
+		display: block;
+	}*/
+
 

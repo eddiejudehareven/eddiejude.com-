@@ -62,12 +62,17 @@
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
+	var _navBar = __webpack_require__(7);
+
+	var _navBar2 = _interopRequireDefault(_navBar);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var mobileMenu = new _MobileMenu2.default(); /* var = object = new = person class -- creates new instance of the class */
 	var revealOnScroll = new _revealOnScroll2.default();
 	var stickyHeader = new _StickyHeader2.default();
 	var modal = new _Modal2.default();
+	var navBar = new _navBar2.default();
 
 /***/ },
 /* 1 */
@@ -96,6 +101,7 @@
 			this.siteHeader = (0, _jquery2.default)(".site-header");
 			this.menuIcon = (0, _jquery2.default)(".nav-bar__menu-icon");
 			this.menuContent = (0, _jquery2.default)(".nav-bar");
+			this.navBar = (0, _jquery2.default)(".nav-bar--menu-bar");
 			this.events();
 		}
 
@@ -111,6 +117,7 @@
 				this.menuContent.toggleClass("nav-bar--is-visible");
 				this.siteHeader.toggleClass("site-header--is-expanded");
 				this.menuIcon.toggleClass("nav-bar__menu-icon--close-x");
+				this.navBar.toggleClass("nav-bar--menu-bar--displayed");
 			}
 		}]);
 
@@ -11297,6 +11304,57 @@
 	}();
 
 	exports.default = Modal; // exports to main JS file //
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(2);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var navBar = function () {
+		function navBar() {
+			_classCallCheck(this, navBar);
+
+			this.displayMenuButton = (0, _jquery2.default)(".site-header--arrow"); // 
+			this.navBar = (0, _jquery2.default)(".nav-bar--menu-bar");
+			this.navLinks = (0, _jquery2.default)(".nav-bar ul");
+			this.events(); //calls the event method
+		}
+
+		_createClass(navBar, [{
+			key: "events",
+			value: function events() {
+				this.displayMenuButton.click(this.toggleTheNavBar.bind(this));
+				console.log(this);
+			}
+		}, {
+			key: "toggleTheNavBar",
+			value: function toggleTheNavBar() {
+				this.navBar.toggleClass("nav-bar--menu-bar--displayed");
+				this.displayMenuButton.toggleClass("site-header--arrow--displayed");
+				// this.navLinks.toggleClass("nav-bar--displayed");
+				console.log("hello");
+			}
+		}]);
+
+		return navBar;
+	}();
+
+	exports.default = navBar;
 
 /***/ }
 /******/ ]);

@@ -2,9 +2,13 @@
 	position: absolute; /* brings up header image so that header can be placed over top */
 	width: 100%;
 	height: 5%;
-	z-index: 1; /*bring header to front. whatever element has a higher z index will be layered on top*/
+	z-index: 0; /*bring header to front. whatever element has a higher z index will be layered on top*/
 	padding: 10px 0;
 	transition: background-color .3s ease-out;
+
+&--arrow--displayed {
+	transform: translateY(20px);
+}
 
 &--arrow-tab {
 	opacity: 0;
@@ -20,7 +24,9 @@
 
 	@mixin atMedium {
 		opacity: 1;
+
 	}
+
 }
 
 &--arrow-tab::after { /* makes triangle */ 
@@ -83,6 +89,7 @@
 	font-weight: 500;
 	font-size: 2rem;
 	opacity: 0.8;
+	z-index: 99;
 	transform: translateY(-20%);
 	transition: transform .5 ease-out;  /* so title smoothly transitions to fade out */ 
 

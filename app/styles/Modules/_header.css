@@ -1,6 +1,5 @@
 .header {
 	border-bottom: 10px solid $mainPurple;
-	position: relative;
 
 &__image {
 	display: block;
@@ -9,7 +8,8 @@
 
  &__text-content {
 	position: absolute;
-	top: 50%;
+	display: block;
+	top: 200px;
 	left: 0;
 	width: 100%;
 	text-align: center;
