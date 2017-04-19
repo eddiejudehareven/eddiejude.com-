@@ -9,7 +9,7 @@
  &__text-content {
 	position: absolute;
 	display: block;
-	top: 200px;
+	top: 15vw; /* view width */ 
 	left: 0;
 	width: 100%;
 	text-align: center;
