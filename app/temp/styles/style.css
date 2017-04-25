@@ -1,3 +1,5 @@
+
+@import "modules/_mixins";
 /* files like mixins, variables, and global rules must be listed before the pages that use their codes */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -389,7 +391,8 @@ template {
 .header__text-content {
   position: absolute;
   display: block;
-  top: 15vw;/* view width */
+  top: 15vw;
+  /* view width */
   left: 0;
   width: 100%;
   text-align: center;
@@ -401,18 +404,18 @@ template {
   margin: 0;
   opacity: 0.8;
 }
-@media (min-width: 530px) {
-  .header__subtitle {
+@media (min-width: 530px){
+  .header__subtitle{
     font-size: 2.5rem;
   }
 }
-@media (min-width: 800px) {
-  .header__subtitle {
+@media (min-width: 800px){
+  .header__subtitle{
     font-size: 3rem;
   }
 }
-@media (min-width: 1010px) {
-  .header__subtitle {
+@media (min-width: 1010px){
+  .header__subtitle{
     font-size: 4.0rem;
   }
 }
@@ -447,8 +450,8 @@ a {
 .btn--large {
   padding: 1.2rem 1.5rem;
 }
-@media (min-width: 530px) {
-  .btn--large {
+@media (min-width: 530px){
+  .btn--large{
     font-size: 1.25rem;
   }
 }
@@ -460,8 +463,8 @@ a {
 	opacity: .8;
 
 }
-@media (min-width: 530px) {
-  .headline {
+@media (min-width: 530px){
+  .headline{
     font-size: 2.55rem;
     font-weight: 400;
     opacity: .8rem;
@@ -477,15 +480,16 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 800px) {
-  .headline--small {
+@media (min-width: 800px){
+  .headline--small{
     font-size: 2.0rem;
   }
 }
 .headline--light {
   font-weight: 300;
 }
-.headline--no-top-margin {/* so no top margin appears on small screens */
+.headline--no-top-margin {
+  /* so no top margin appears on small screens */
   margin-top: 0;
 }
 .wrapper { /*wrapper ensures same padding, margin and max width for all parts of the page targeted. can be re-used*/
@@ -501,8 +505,8 @@ a {
   padding-left: 0px;
   padding-right: 0px;
 }
-@media (min-width: 800px) {
-  .wrapper--no-padding-until-medium {
+@media (min-width: 800px){
+  .wrapper--no-padding-until-medium{
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -514,8 +518,8 @@ a {
   padding-left: 0px;
   padding-right: 0px;
 }
-@media (min-width: 1010px) {
-  .wrapper--no-padding-until-large {
+@media (min-width: 1010px){
+  .wrapper--no-padding-until-large{
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -529,60 +533,69 @@ a {
 }
 /* the entire row must have its own row div followed by an additional row div selecting the specific rows. example: row-4 and row-8
 */
-.row::after {
+.row::after{
   content: "";
   clear: both;
   display: table;
 }
 /* used to clear floats*/
-.row--gutters {/* gutters (space) between columns in row div */
+.row--gutters {
+  /* gutters (space) between columns in row div */
   margin-right: -50px;
 }
-.row--gutters > div {/*gutters (space) between any div's within gutters div */
+.row--gutters > div {
+  /*gutters (space) between any div's within gutters div */
   padding-right: 50px;
 }
-.row__bottom-margin-for-small {/* bottom margin between about me photo and text for smaller screens in single column layout */
+.row__bottom-margin-for-small {
+  /* bottom margin between about me photo and text for smaller screens in single column layout */
   margin-bottom: 1rem;
 }
-@media (min-width: 1010px) {
-  .row__bottom-margin-for-large {
+@media (min-width: 1010px){
+  .row__bottom-margin-for-large{
     margin-bottom: 0rem;
   }
-  .row__medium-4 {/* column layout for the about me section picture/2 column layout*/
+  .row__medium-4{
+    /* column layout for the about me section picture/2 column layout*/
     float: left;
-    width: 33.3%;/*percentages of how much space each column takes up on the page*/
+    width: 33.3%;
+    /*percentages of how much space each column takes up on the page*/
   }
-  .row__medium-4--larger {
+  .row__medium-4--larger{
     width: 37%;
   }
-  .row__medium-3 {/* column layout for the FAQ sections/3 column layout */
+  .row__medium-3{
+    /* column layout for the FAQ sections/3 column layout */
     float: left;
     width: 33.3%;
   }
-  .row__medium-8 {/* column layout for the about me section text/2 column layout*/
+  .row__medium-8{
+    /* column layout for the about me section text/2 column layout*/
     float: left;
     width: 66.66%;
   }
-  .row__medium-8--smaller {
+  .row__medium-8--smaller{
     width: 63%;
   }
 }
 /* begin equal height rules so all columns display equal height */
-@media (min-width: 800px) {
-  .row--equal-height-at-medium {
+@media (min-width: 800px){
+  .row--equal-height-at-medium{
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;/* code to create flexbox/display columns at equal height */
+    display: flex;
+    /* code to create flexbox/display columns at equal height */
   }
 }
-.row--equal-height-at-medium > div {/* selects all children divs so all columns become same height */
+.row--equal-height-at-medium > div {
+  /* selects all children divs so all columns become same height */
   float: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-@media (min-width: 1010px) {
-  .row--equal-height-at-large {
+@media (min-width: 1010px){
+  .row--equal-height-at-large{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -603,28 +616,29 @@ a {
 	padding: 1rem 0;
 	background-color: #e7f1fa;
 }
-@media (min-width: 800px) {
-  .page-section {
+@media (min-width: 800px){
+  .page-section{
     background-color: #FFF;
   }
 }
 .page-section--no-padding-top-until-medium {
   padding-top: 0;
 }
-@media (min-width: 800px) {
-  .page-section--no-padding-top-until-medium {
+@media (min-width: 800px){
+  .page-section--no-padding-top-until-medium{
     padding-top: 1rem 0;
   }
 }
 .page-section--no-padding-top-until-large {
   padding-top: 0;
 }
-@media (min-width: 1010px) {
-  .page-section--no-padding-top-until-large {
+@media (min-width: 1010px){
+  .page-section--no-padding-top-until-large{
     padding-top: 1rem 0;
   }
 }
-.page-section--trainings {/* background color for section */
+.page-section--trainings {
+  /* background color for section */
   background-color: #945779;
   color: #000;
 }
@@ -636,8 +650,8 @@ a {
 	font-weight: 400;
 	text-align: center;
 }
-@media (min-width: 530px) {
-  .section-title {
+@media (min-width: 530px){
+  .section-title{
     font-size: 3rem;
   }
 }
@@ -652,17 +666,20 @@ a {
 .generic-content-container p {
   font-weight: 300;
   line-height: 1.25;
-  margin: 0 0 1rem 0;/* css shorthand for margins - goes in clockwise fashion */
+  margin: 0 0 1rem 0;
+  /* css shorthand for margins - goes in clockwise fashion */
   font-size: 1rem;
 }
 /* default font size for browser - does not need to written */
-@media (min-width: 530px) {
-  .generic-content-container p {
-    font-size: 1rem;/*font size change once screens are larger than small */
+@media (min-width: 530px){
+  .generic-content-container p{
+    font-size: 1rem;
+    /*font size change once screens are larger than small */
     line-height: 1.65;
   }
 }
-.generic-content-container p a {/* descendent selector targets all links within a paragraph */
+.generic-content-container p a {
+  /* descendent selector targets all links within a paragraph */
   font-weight: 700;
 }
 .faq-title { /*you could nest a rule where any strong tags carry a different font weight */
@@ -673,8 +690,8 @@ a {
 	text-align: center;
 
 }
-@media (min-width: 530px) {
-  .faq-title {
+@media (min-width: 530px){
+  .faq-title{
     font-size: 2.55rem;
     font-weight: 400;
     opacity: .8rem;
@@ -693,8 +710,8 @@ a {
   margin-bottom: .8rem;
   text-align: center;
 }
-@media (min-width: 530px) {
-  .faq-question__title {
+@media (min-width: 530px){
+  .faq-question__title{
     text-align: left;
   }
 }
@@ -705,23 +722,25 @@ a {
 	margin-bottom: 20px;
 }
 /*creates bottom margin for single stacked columns on small screens */
-@media (min-width: 800px) {
-  .training-block {/* ensures no bottom margin on larger screens */
+@media (min-width: 800px){
+  .training-block{
+    /* ensures no bottom margin on larger screens */
     margin-bottom: 20px;
   }
 }
 .training-block--no-bottom-margin-for-small {
   margin-bottom: 0;
 }
-.training-block__title {/* training titles */
+.training-block__title {
+  /* training titles */
   text-align: center;
   color: #242424;
   opacity: .8;
   font-size: 1.2rem;
   font-weight: 800;
 }
-@media (min-width: 530px) {
-  .training-block__title {
+@media (min-width: 530px){
+  .training-block__title{
     text-align: left;
   }
 }
@@ -734,25 +753,31 @@ a {
 	font-size: 0.7rem;
 
 }
-.site-footer ul {/* parent of li */
+.site-footer ul {
+  /* parent of li */
   margin: 0;
-  padding-left: 30px;/* clears floats */
+  padding-left: 30px;
+  /* clears floats */
 }
-.site-footer ul::after {
+.site-footer ul::after{
   content: "";
   clear: both;
   display: table;
 }
 .site-footer li {
-  list-style: none;/* gets rid of bullet points */
+  list-style: none;
+  /* gets rid of bullet points */
   display: inline;
 }
-.site-footer a {/*targets any links */
+.site-footer a {
+  /*targets any links */
   position: relative;
   color: #FFF;
   font-size: 0.7rem;
-  text-decoration: none;/* gets rid of underlines */
-  display: block;/* turns links into block element */
+  text-decoration: none;
+  /* gets rid of underlines */
+  display: block;
+  /* turns links into block element */
   padding: 5px 5px;
 }
 .site-footer a:hover {
@@ -786,12 +811,13 @@ a {
   background-color: black;
 }
 /*transform: translateY(40%);*/
-@media (min-width: 800px) {
-  .site-header--arrow-tab {
+@media (min-width: 800px){
+  .site-header--arrow-tab{
     opacity: 1;
   }
 }
-.site-header--arrow-tab::after {/* makes triangle */
+.site-header--arrow-tab::after {
+  /* makes triangle */
   content: "";
   position: absolute;
   top: 100%;
@@ -813,8 +839,8 @@ a {
   right: 5px;
   top: 5px;
 }
-@media (min-width: 800px) {
-  .site-header--arrow-text {
+@media (min-width: 800px){
+  .site-header--arrow-text{
     opacity: 1;
   }
 }
@@ -823,19 +849,23 @@ a {
   background-color: ;
   opacity: 1;
 }
-@media (min-width: 800px) {
-  .site-header {/* we're moving the black bar to its own element! *//*background-color: black;*//* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
-    position: fixed;/* sticky header */
+@media (min-width: 800px){
+  .site-header{
+    /* we're moving the black bar to its own element! */
+    /*background-color: black;*/
+    /* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
+    position: fixed;
+    /* sticky header */
   }
-  .site-header--dark {
+  .site-header--dark{
     background-color: black;
   }
 }
 .site-header__btn-container {
   display: none;
 }
-@media (min-width: 800px) {
-  .site-header__btn-container {
+@media (min-width: 800px){
+  .site-header__btn-container{
     display: block;
     float: right;
     -webkit-transform: translateY(-150%);
@@ -857,10 +887,11 @@ a {
   transition: transform .5 ease-out, -webkit-transform .5 ease-out;
 }
 /* so title smoothly transitions to fade out */
-@media (min-width: 800px) {
-  .site-header__title {
+@media (min-width: 800px){
+  .site-header__title{
     background-color: white;
-    border: 2px solid #e8e9ea;/* how do you space the border? */
+    border: 2px solid #e8e9ea;
+    /* how do you space the border? */
     width: 15%;
     padding: 20px;
     text-align: left;
@@ -870,7 +901,7 @@ a {
     -webkit-transform: translateY(-25%);
             transform: translateY(-25%);
   }
-  .site-header--dark .site-header__title {
+  .site-header--dark .site-header__title{
     opacity: 0;
   }
 }
@@ -880,10 +911,75 @@ a {
 	top: 0;
 	right: 0;
 
+/*&__menu-icon {
+	width: 20px;
+	height: 19px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 10;
+
+	&::before { /*CSS for the 3 line sandwich nav symbol */
+/*		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 20px;
+		height: 3px;
+		right: 10px;
+		background-color: #FFF;
+		transform-origin: 0 0;
+		transition: transform .3s ease-out;
+	}
+
+	&__middle { /*CSS for the 3 line sandwich nav symbol */
+		/*position: absolute;
+		top: 8px;
+		left: 0;
+		width: 20px;
+		height: 3px;
+		right: 10px;
+		background-color: #FFF;
+		transition: all .3s ease-out;  line transitions with ease out effect at .3seconds 
+		transform-origin: 0 50%;  changes the centre origin of the line from middle to right side 
+	}
+*/
+	/*&::after { CSS for the 3 line sandwich nav symbol 
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 20px;
+		height: 3px;
+		right: 10px;
+		background-color: #FFF;
+		transform-origin: 0 100%;
+		transition: transform .3s ease-out;
+			}
+	@mixin atMedium {
+		display: none;
+	} 
+}*/
+
+/*&__menu-icon--close-x {
+		&::before {
+			transform: rotate(45deg) scaleX(1.25);
+		}
+
+		.nav-bar__menu-icon__middle {
+			opacity: 0;
+			transform: scaleX(0);  shrinks width from 100% down to 0 (nothing) therefore will shrink and fade 
+		}
+
+		&::after {
+			transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+		}
+	}*/
+
 }
 /* so that hidden content doesn't get accidentally clicked on */
-@media (min-width: 800px) {
-  .nav-bar {
+@media (min-width: 800px){
+  .nav-bar{
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -897,8 +993,8 @@ a {
   width: 100%;
   background-color: black;
 }
-@media (min-width: 800px) {
-  .nav-bar--menu-bar {
+@media (min-width: 800px){
+  .nav-bar--menu-bar{
     height: 10px;
     opacity: 1;
   }
@@ -915,136 +1011,73 @@ a {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
-  z-index: 1;/* so hidden content now gets pushed to the front when visible */
+  z-index: 1;
+  /* so hidden content now gets pushed to the front when visible */
 }
 /*transform: scale(1.2);*/
-.nav-bar--pull-right {/* modifier for nav bar items that should float right */
+.nav-bar--pull-right {
+  /* modifier for nav bar items that should float right */
   float: left;
 }
-@media (min-width: 530px) {
-  .nav-bar--pull-right {
+@media (min-width: 530px){
+  .nav-bar--pull-right{
     float: right;
   }
 }
-.nav-bar ul {/* parent of li */
+.nav-bar ul {
+  /* parent of li */
   display: none;
   margin: 0;
-  padding-left: 30px;/* clears floats */
+  padding-left: 30px;
+  /* clears floats */
 }
-.nav-bar ul::after {
+.nav-bar ul::after{
   content: "";
   clear: both;
   display: table;
 }
 .nav-bar li {
-  list-style: none;/* gets rid of bullet points */
+  list-style: none;
+  /* gets rid of bullet points */
   display: inline-list-item;
   text-align: right;
 }
-@media (min-width: 800px) {
-  .nav-bar li {
+@media (min-width: 800px){
+  .nav-bar li{
     float: left;
     display: block;
     text-align: left;
     padding-right: 20px;
   }
 }
-@media (min-width: 1010px) {}
-.nav-bar a {/*targets any links */
+@media (min-width: 1010px){}
+.nav-bar a {
+  /*targets any links */
   position: relative;
   background-color: black;
   color: #945779;
   font-weight: 300;
-  text-decoration: none;/* gets rid of underlines */
-  display: block;/* turns links into block element */
+  text-decoration: none;
+  /* gets rid of underlines */
+  display: block;
+  /* turns links into block element */
   padding: 15px 15px;
   font-size: .8rem;
 }
 .nav-bar a:hover {
   color: #eeab26;
 }
-@media (min-width: 800px) {
-  .nav-bar a {
+@media (min-width: 800px){
+  .nav-bar a{
     position: relative;
     color: white;
     padding: 10px 0;
     font-size: .8rem;
     background-color: transparent;
   }
-  .nav-bar a $.is-current-link {
+  .nav-bar a $.is-current-link{
     color: #fabb69;
   }
-}
-.nav-bar__menu-icon {
-  width: 20px;
-  height: 19px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-}
-.nav-bar__menu-icon::before {/*CSS for the 3 line sandwich nav symbol */
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 3px;
-  right: 10px;
-  background-color: #FFF;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transition: -webkit-transform .3s ease-out;
-  transition: -webkit-transform .3s ease-out;
-  transition: transform .3s ease-out;
-  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-}
-.nav-bar__menu-icon__middle {/*CSS for the 3 line sandwich nav symbol */
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 20px;
-  height: 3px;
-  right: 10px;
-  background-color: #FFF;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds */
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;/* changes the centre origin of the line from middle to right side */
-}
-.nav-bar__menu-icon::after {/*CSS for the 3 line sandwich nav symbol */
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 20px;
-  height: 3px;
-  right: 10px;
-  background-color: #FFF;
-  -webkit-transform-origin: 0 100%;
-          transform-origin: 0 100%;
-  -webkit-transition: -webkit-transform .3s ease-out;
-  transition: -webkit-transform .3s ease-out;
-  transition: transform .3s ease-out;
-  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-}
-@media (min-width: 800px) {
-  .nav-bar__menu-icon {
-    display: none;
-  }
-}
-.nav-bar__menu-icon--close-x::before {
-  -webkit-transform: rotate(45deg) scaleX(1.25);
-          transform: rotate(45deg) scaleX(1.25);
-}
-.nav-bar__menu-icon--close-x .nav-bar__menu-icon__middle {
-  opacity: 0;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);/* shrinks width from 100% down to 0 (nothing) therefore will shrink and fade */
-}
-.nav-bar__menu-icon--close-x::after {
-  -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-          transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 }
 /* figure out how to select child of ul in post-css */
 /*.nav-bar--menu-bar--displayed nav ul {
@@ -1096,10 +1129,13 @@ a {
 }
 .modal__inner {
   position: absolute;
-  width: 100%;/* so width is not shrunken by position aboslute */
-  top: 50%;/* pushes div down 50% of the page */
+  width: 100%;
+  /* so width is not shrunken by position aboslute */
+  top: 50%;
+  /* pushes div down 50% of the page */
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);/* pushes it back up 50% */
+          transform: translateY(-50%);
+  /* pushes it back up 50% */
 }
 .modal__description {
   text-align: center;
@@ -1108,19 +1144,24 @@ a {
   line-height: 1.65;
 }
 .modal__close {
-  position: absolute;/* to move X to the top right position */
-  top: 15px;/* to move X to the top right position */
+  position: absolute;
+  /* to move X to the top right position */
+  top: 15px;
+  /* to move X to the top right position */
   right: 15px;
   font-size: 2rem;
   -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);/* stretches X out horizontally */
+          transform: scaleX(1.2);
+  /* stretches X out horizontally */
   -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;/* stretches X out */
+          transform-origin: 100% 0;
+  /* stretches X out */
   color: #945779;
   cursor: pointer;
 }
 /* makes mouse turn to a pointer */
-.modal__close:hover {/* X changes color when hovered over */
+.modal__close:hover {
+  /* X changes color when hovered over */
   color: #eeab26;
 }
 .social-icons {

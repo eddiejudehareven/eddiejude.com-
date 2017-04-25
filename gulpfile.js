@@ -2,11 +2,11 @@ var gulp = require('gulp'),
 watch = require('gulp-watch'),
 postcss = require('gulp-postcss'),
 autoprefixer = require('autoprefixer'),
+mixins = require('postcss-mixins'),
 cssvars = require('postcss-simple-vars'),
 cssnested = require('postcss-nested'),
 cssImport = require('postcss-import'),
 browserSync = require('browser-sync').create(),
-mixins = require('postcss-mixins'),
 webpack = require('webpack'),
 imagemin = require('gulp-imagemin');
 

@@ -35,7 +35,7 @@
 	}
 }
 
-/*&__description {
+&__description {
 	color: #FFF;
 	font-size: 1.1rem;
 	font-weight: 100;
@@ -47,5 +47,5 @@
 @mixin atSmall {
 	font-size: 1.875rem;
 }	
-}*/
+}
 }
