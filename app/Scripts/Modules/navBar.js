@@ -17,7 +17,7 @@ class navBar {
 		this.navBar.toggleClass("nav-bar--menu-bar--displayed");
 		this.displayMenuButton.toggleClass("site-header--arrow--displayed");
 		// this.navLinks.toggleClass("nav-bar--displayed");
-		console.log("hello");
+		// console.log("hello");
 		
 	}
 

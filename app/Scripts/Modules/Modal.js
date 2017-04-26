@@ -12,6 +12,7 @@ class Modal {
 		//clicking the open modal button // //bind binds 'this' // 
 		this.openModalButton.click(this.openModal.bind(this)); //when the openModal button is clicked run the opelModal method // 
 		// click the x close modal button
+
 		this.closeModalButton.click(this.closeModal.bind(this)); //when the X is clicked run the closeModal method //
 		//pushes any escape key
 		$(document).keyup(this.keyPressHandler.bind(this));

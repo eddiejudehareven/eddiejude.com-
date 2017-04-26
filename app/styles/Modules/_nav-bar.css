@@ -12,169 +12,64 @@
 		padding-top: 0;
 	}
 
-&--menu-bar {
-	opacity: 0;
-	height: 30px;
-	width: 100%;
-	background-color: black;
+	&--menu-bar {
+		opacity: 0;
+		z-index: -9;
+		height: 30px;
+		width: 100%;
+		background-color: black;
 
-	@mixin atMedium {
-		height: 10px;
-		opacity: 1;
-	}
-
-/*&--displayed {
-	height: 30px;
-	width: 100%;
-
-	& nav ul {
-		display: block;
-	}*/
-
-}
-
-}
-
-
-/*&--is-visible {
-	opacity: 1;
-	transform: scale(1);
-	z-index: 1;  so hidden content now gets pushed to the front when visible  
-}*/
-
-&--pull-right { /* modifier for nav bar items that should float right */
-	float: left;
-
-	@mixin atSmall {
-		float: right;
-
-	}
-}
-
-ul { /* parent of li */
-	display: none;
-	margin: 0;
-	padding-left: 30px;
-
-	@mixin clearfix; /* clears floats */
-
-
-}
-
-li {
-	list-style: none; /* gets rid of bullet points */
-	display: inline-list-item;
-	text-align: right;
-
-	@mixin atMedium {
-		float: left;
-		display: block;
-		text-align: left;
-		padding-right: 20px;
-	}
-
-	@mixin atLarge {
-	}
-}
-
-a { /*targets any links */
-	position: relative;
-	background-color: black;
-	color: $mainPurple;
-	font-weight: 300;
-	text-decoration: none; /* gets rid of underlines */
-	display: block; /* turns links into block element */
-	padding: 15px 15px;
-	font-size: .8rem;
-
-	&:hover {
-		color: $mainGold;
-}
-	@mixin atMedium {
-		position: relative;
-		color: white;
-		padding: 10px 0;
-		font-size: .8rem;
-		background-color: transparent;
-
-		$.is-current-link {
-			color: #fabb69;
+		@mixin atMedium {
+			height: 10px;
+			opacity: 1;
 		}
 
-	}
-}
+		&--displayed {
+			height: 30px;
+			width: 100%;
 
-/*&__menu-icon {
-	width: 20px;
-	height: 19px;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	z-index: 10;
+			& nav ul {
+				display: block;
 
-	&::before { /*CSS for the 3 line sandwich nav symbol */
-/*		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 20px;
-		height: 3px;
-		right: 10px;
-		background-color: #FFF;
-		transform-origin: 0 0;
-		transition: transform .3s ease-out;
-	}
-
-	&__middle { /*CSS for the 3 line sandwich nav symbol */
-		/*position: absolute;
-		top: 8px;
-		left: 0;
-		width: 20px;
-		height: 3px;
-		right: 10px;
-		background-color: #FFF;
-		transition: all .3s ease-out;  line transitions with ease out effect at .3seconds 
-		transform-origin: 0 50%;  changes the centre origin of the line from middle to right side 
-	}
-*/
-	/*&::after { CSS for the 3 line sandwich nav symbol 
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 20px;
-		height: 3px;
-		right: 10px;
-		background-color: #FFF;
-		transform-origin: 0 100%;
-		transition: transform .3s ease-out;
 			}
-	@mixin atMedium {
-		display: none;
-	} 
-}*/
-
-/*&__menu-icon--close-x {
-		&::before {
-			transform: rotate(45deg) scaleX(1.25);
 		}
 
-		.nav-bar__menu-icon__middle {
-			opacity: 0;
-			transform: scaleX(0);  shrinks width from 100% down to 0 (nothing) therefore will shrink and fade 
+	}
+
+	&--pull-right { /* modifier for nav bar items that should float right */
+		float: left;
+
+		@mixin atSmall {
+			float: right;
+
 		}
 
-		&::after {
-			transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+		ul {
+			display: none;
+
 		}
-	}*/
+
+		li {
+		 
+			list-style: none; /* gets rid of bullet points */
+			display: inline-list-item;
+			text-align: right;
+
+			@mixin atMedium {
+				float: left;
+				display: block;
+				text-align: left;
+				padding-right: 20px;
+			}
+
+		}
+	}
 
 }
 
 
-/* figure out how to select child of ul in post-css */
+		/* figure out how to select child of ul in post-css */
 /*.nav-bar--menu-bar--displayed nav ul {
 		display: block;
-	}*/
-
+		}*/
 

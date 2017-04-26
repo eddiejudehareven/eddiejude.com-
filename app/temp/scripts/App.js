@@ -98,10 +98,9 @@
 		function MobileMenu() {
 			_classCallCheck(this, MobileMenu);
 
-			this.siteHeader = (0, _jquery2.default)(".site-header");
-			this.menuIcon = (0, _jquery2.default)(".nav-bar__menu-icon");
-			this.menuContent = (0, _jquery2.default)(".nav-bar");
-			this.navBar = (0, _jquery2.default)(".nav-bar--menu-bar");
+			this.mobileNav = (0, _jquery2.default)(".mobile-nav");
+			this.menuIcon = (0, _jquery2.default)(".mobile-nav__menu-icon");
+			this.menuContent = (0, _jquery2.default)(".mobile-nav__content");
 			this.events();
 		}
 
@@ -114,10 +113,9 @@
 		}, {
 			key: "toggleTheMenu",
 			value: function toggleTheMenu() {
-				this.menuContent.toggleClass("nav-bar--is-visible");
-				this.siteHeader.toggleClass("site-header--is-expanded");
-				this.menuIcon.toggleClass("nav-bar__menu-icon--close-x");
-				this.navBar.toggleClass("nav-bar--menu-bar--displayed");
+				this.menuContent.toggleClass("mobile-nav__content--is-visible");
+				// this.siteHeader.toggleClass("mobile-nav--is-expanded");
+				this.menuIcon.toggleClass("mobile-nav__menu-icon--close-x");
 			}
 		}]);
 
@@ -11275,6 +11273,7 @@
 				//clicking the open modal button // //bind binds 'this' // 
 				this.openModalButton.click(this.openModal.bind(this)); //when the openModal button is clicked run the opelModal method // 
 				// click the x close modal button
+
 				this.closeModalButton.click(this.closeModal.bind(this)); //when the X is clicked run the closeModal method //
 				//pushes any escape key
 				(0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
@@ -11347,7 +11346,7 @@
 				this.navBar.toggleClass("nav-bar--menu-bar--displayed");
 				this.displayMenuButton.toggleClass("site-header--arrow--displayed");
 				// this.navLinks.toggleClass("nav-bar--displayed");
-				console.log("hello");
+				// console.log("hello");
 			}
 		}]);
 

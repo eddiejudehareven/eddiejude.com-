@@ -14,4 +14,9 @@
 }
 }
 
+a {
+	color: $mainPurple;
+	font-size: 1rem;
+}
+
 }
