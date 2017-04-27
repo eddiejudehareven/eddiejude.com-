@@ -398,6 +398,7 @@ h1 {
 @media (min-width: 800px) {
   .header__subtitle {
     font-size: 3rem;
+    z-index: -990;
   }
 }
 @media (min-width: 1010px) {
@@ -464,7 +465,7 @@ a:hover {
   }
 }
 .btn {
-	background-color: #a62041; 
+	background-color: #945779; 
 	color: #FFF;
 	text-decoration: none;
 	padding: .75rem 1.2rem;
@@ -888,13 +889,15 @@ a:hover {
 .site-header__title {
   color: #242424;
   background-color: white;
+  position: absolute;
+  left: 10px;
   width: 15%;
   padding: 5px;
   text-align: left;
   font-weight: 500;
   font-size: 1rem;
-  opacity: 0.8;
-  z-index: 99;
+  opacity: 0.9;
+  z-index: 9;
   -webkit-transition: -webkit-transform .5 ease-out;
   transition: -webkit-transform .5 ease-out;
   transition: transform .5 ease-out;
@@ -904,13 +907,14 @@ a:hover {
 @media (min-width: 800px) {
   .site-header__title {
     background-color: white;
-    border: 2px solid #e8e9ea;/* how do you space the border? */
-    width: 15%;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    border: 2px solid #e8e9ea;/* how do you space the border? *//*width: 15vw;*/
     padding: 20px;
-    text-align: left;
+    text-align: center;
     font-weight: 900;
     font-size: 1.5rem;
-    opacity: 1;
   }
   .site-header--dark .site-header__title {
     opacity: 0;
@@ -993,9 +997,7 @@ a:hover {
   position: relative;
   left: 25%;
   width: 50%;
-  text-align: center;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  text-align: center;/*transform: translateY(-30%);*/
 }
 .reveal-item {
 	opacity: 0;
@@ -1007,7 +1009,7 @@ a:hover {
 }
 .modal {
 	position: fixed;
-	z-index: 5;
+	z-index: 999;
 	background-color: rgba(255, 255, 255, .94);
 	top: 0;  /* so image takes up entire screen */ 
 	bottom: 0;
@@ -1067,24 +1069,33 @@ a:hover {
   display: block;
 }
 .mobile-nav__content {
-  opacity: 1;
-  top: 15px;
-  position: absolute;/*background-color: black;*/
+  display: none;
+}
+.mobile-nav__content--is-visible {
+  display: block;/*top: 15px;*/
   right: 0;
   z-index: 99;
 }
-.mobile-nav--is-visible {
-  opacity: 1;
+.mobile-nav__content--overlay {
+  height: 100%;/*width: 0;*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: black;
+  opacity: .9;
+  overflow-x: hidden;/*disables horizontal scrolling*/
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-/*	&--is-visible {
-		opacity: 1;
-		transform: scale(1);
-		z-index:   so hidden content now gets pushed to the front when visible  
-}*/
 .mobile-nav li {
   list-style: none;/* gets rid of bullet points */
   display: inline-list-item;
-  text-align: right;
+  text-align: center;
+}
+.mobile-nav a {
+  display: inline-block;
+  width: 50%;
+  font-size: 1rem;
 }
 .mobile-nav__menu-icon {
   width: 20px;
@@ -1141,6 +1152,7 @@ a:hover {
   }
 }
 .mobile-nav__menu-icon--close-x::before {
+  z-index: 999;
   -webkit-transform: rotate(45deg) scaleX(1.25);
           transform: rotate(45deg) scaleX(1.25);
 }
@@ -1152,8 +1164,27 @@ a:hover {
 .mobile-nav__menu-icon--close-x::after {
   -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
           transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+  z-index: 99;
 }
+.mailing-list {
+	position: absolute;
+	top: 40px;
+	left: 19%;
 
+}
+.mailing-list--title {
+  position: absolute;
+  top: 0;
+}
+.mailing-list__button {
+  position: absolute;
+  bottom: 10px;
+  background-color: #945779;
+  text-decoration: none;
+  font-size: .75rem;
+  padding: .75rem 1rem;
+  display: inline-block;
+}
 
 
 

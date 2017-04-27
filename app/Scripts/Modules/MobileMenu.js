@@ -10,14 +10,15 @@ class MobileMenu {
 
 	events() {
 		this.menuIcon.click(this.toggleTheMenu.bind(this)); 
-		console.log(this);
 	}
+
 
 	toggleTheMenu() {
 		this.menuContent.toggleClass("mobile-nav__content--is-visible");
 		// this.siteHeader.toggleClass("mobile-nav--is-expanded");
 		this.menuIcon.toggleClass("mobile-nav__menu-icon--close-x");
 	}
+
 }
 
 export default MobileMenu; 

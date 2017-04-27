@@ -1,6 +1,6 @@
 .modal {
 	position: fixed;
-	z-index: 5;
+	z-index: 999;
 	background-color: rgba(255, 255, 255, .94);
 	top: 0;  /* so image takes up entire screen */ 
 	bottom: 0;

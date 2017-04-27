@@ -1,30 +1,43 @@
 .mobile-nav {
 
 	&__content {
-	opacity: 1;
-	top: 15px;
-	position: absolute;
-	/*background-color: black;*/
-	right: 0;
-	z-index: 99;
-
-}
+	display: none;
 
 	&--is-visible {
-		opacity: 1;
-		}
+		display: block;
+		/*top: 15px;*/
+		right: 0;
+		z-index: 99;
+	
+	}
 
-	/*	&--is-visible {
-		opacity: 1;
-		transform: scale(1);
-		z-index:   so hidden content now gets pushed to the front when visible  
-}*/
+	&--overlay {
+	height: 100%;
+	/*width: 0;*/
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: black;
+	opacity: .9;
+	overflow-x: hidden; /*disables horizontal scrolling*/
+	transition: 0.5s; 
+	}
+
+}
 
 	li {
 
 		list-style: none; /* gets rid of bullet points */
 		display: inline-list-item;
-		text-align: right;
+		text-align: center;
+
+	}
+
+	a {
+		display: inline-block;
+		width: 50%;
+		font-size: 1rem;
+
 	}
 
 	&__menu-icon {
@@ -80,7 +93,9 @@
 
 	&__menu-icon--close-x {
 
+
 		&::before {
+			z-index: 999;
 			transform: rotate(45deg) scaleX(1.25);
 		}
 
@@ -91,6 +106,7 @@
 
 		&::after {
 			transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+			z-index: 99;
 		}
 	}
 }

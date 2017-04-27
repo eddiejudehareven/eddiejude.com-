@@ -32,6 +32,7 @@ h1 {
 
 		@mixin atMedium {
 			font-size: 3rem;
+			z-index: -990;
 		}
 
 		@mixin atLarge {

@@ -108,7 +108,6 @@
 			key: "events",
 			value: function events() {
 				this.menuIcon.click(this.toggleTheMenu.bind(this));
-				console.log(this);
 			}
 		}, {
 			key: "toggleTheMenu",
