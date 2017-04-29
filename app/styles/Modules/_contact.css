@@ -5,6 +5,7 @@
 	text-align: center;
 
 &__text-content {
+	background-color: $mainGold;
 	position: relative;
 	left: 25%;
 	width: 50%;

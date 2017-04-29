@@ -20,7 +20,7 @@
 	&__inner {
 		position: absolute;
 		width: 100%; /* so width is not shrunken by position aboslute */ 
-		top: 50%; /* pushes div down 50% of the page */
+		top: 40%; /* pushes div down 50% of the page */
 		transform: translateY(-50%); /* pushes it back up 50% */ 
 	}
 
@@ -33,7 +33,7 @@
 
 	&__close {
 		position: absolute; /* to move X to the top right position */ 
-		top: 15px; /* to move X to the top right position */
+		top: 0px; /* to move X to the top right position */
 		right: 15px;
 		font-size: 2rem;
 		transform: scaleX(1.2); /* stretches X out horizontally */ 

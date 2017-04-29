@@ -398,7 +398,6 @@ h1 {
 @media (min-width: 800px) {
   .header__subtitle {
     font-size: 3rem;
-    z-index: -990;
   }
 }
 @media (min-width: 1010px) {
@@ -994,6 +993,7 @@ a:hover {
 	text-align: center;
 }
 .contact__text-content {
+  background-color: #eeab26;
   position: relative;
   left: 25%;
   width: 50%;
@@ -1032,7 +1032,7 @@ a:hover {
 .modal__inner {
   position: absolute;
   width: 100%;/* so width is not shrunken by position aboslute */
-  top: 50%;/* pushes div down 50% of the page */
+  top: 40%;/* pushes div down 50% of the page */
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);/* pushes it back up 50% */
 }
@@ -1044,7 +1044,7 @@ a:hover {
 }
 .modal__close {
   position: absolute;/* to move X to the top right position */
-  top: 15px;/* to move X to the top right position */
+  top: 0px;/* to move X to the top right position */
   right: 15px;
   font-size: 2rem;
   -webkit-transform: scaleX(1.2);
@@ -1112,7 +1112,7 @@ a:hover {
   width: 20px;
   height: 3px;
   right: 10px;
-  background-color: #FFF;
+  background-color: #945779;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
@@ -1126,7 +1126,7 @@ a:hover {
   width: 20px;
   height: 3px;
   right: 10px;
-  background-color: #FFF;
+  background-color: #945779;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
@@ -1140,7 +1140,7 @@ a:hover {
   width: 20px;
   height: 3px;
   right: 10px;
-  background-color: #FFF;
+  background-color: #945779;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
@@ -1162,6 +1162,7 @@ a:hover {
           transform: scaleX(0);/* shrinks width from 100% down to 0 (nothing) therefore will shrink and fade */
 }
 .mobile-nav__menu-icon--close-x::after {
+  color: #945779;
   -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
           transform: rotate(-45deg) scaleX(1.25) translateY(1px);
   z-index: 99;
@@ -1185,7 +1186,21 @@ a:hover {
   padding: .75rem 1rem;
   display: inline-block;
 }
+.contact-form {
+	overflow: hidden; /*why doesn't this work?*/ 
+	font-size: 18px;
+	position: absolute;
+	right: 38%;
+	-webkit-transform: translateY(-30%);
+	        transform: translateY(-30%);
 
+}
+.contact-form__btn {
+  position: relative;
+  bottom: 18px;
+  left: 5px;
+}
+.contact-form__name {}
 
 
 

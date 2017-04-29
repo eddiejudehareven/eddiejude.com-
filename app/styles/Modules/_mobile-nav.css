@@ -55,7 +55,7 @@
 			width: 20px;
 			height: 3px;
 			right: 10px;
-			background-color: #FFF;
+			background-color: $mainPurple;
 			transition: all .3s ease-out;  /* line transitions with ease out effect at .3seconds  */
 			transform-origin: 0 50%;  /* changes the centre origin of the line from middle to right side */
 		}
@@ -68,7 +68,7 @@
 			width: 20px;
 			height: 3px;
 			right: 10px;
-			background-color: #FFF;
+			background-color: $mainPurple;
 			transition: all .3s ease-out;  /* line transitions with ease out effect at .3seconds  */
 			transform-origin: 0 50%;  /* changes the centre origin of the line from middle to right side */
 		}
@@ -81,7 +81,7 @@
 			width: 20px;
 			height: 3px;
 			right: 10px;
-			background-color: #FFF;
+			background-color: $mainPurple;
 			transition: all .3s ease-out;  /* line transitions with ease out effect at .3seconds  */
 			transform-origin: 0 50%;  /* changes the centre origin of the line from middle to right side */
 		}
@@ -93,8 +93,8 @@
 
 	&__menu-icon--close-x {
 
-
 		&::before {
+
 			z-index: 999;
 			transform: rotate(45deg) scaleX(1.25);
 		}
@@ -105,6 +105,7 @@
 		}
 
 		&::after {
+			color: $mainPurple; 
 			transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 			z-index: 99;
 		}

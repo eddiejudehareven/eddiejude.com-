@@ -1,0 +1,17 @@
+.contact-form {
+	overflow: hidden; /*why doesn't this work?*/ 
+	font-size: 18px;
+	position: absolute;
+	right: 38%;
+	transform: translateY(-30%);
+
+&__btn {
+	position: relative;
+	bottom: 18px;
+	left: 5px;
+}
+
+&__name {
+}
+
+}
