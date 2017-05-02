@@ -1,9 +1,16 @@
 .contact-form {
-	overflow: hidden; /*why doesn't this work?*/ 
-	font-size: 18px;
+	left: 50vw;
+	transform: translateX(30%);
+	/*overflow: hidden;*/
+
+	@mixin atMedium {
+	/*overflow: hidden;*/ /*why doesn't this work?*/ 
+	font-size: 25px;
 	position: absolute;
-	right: 38%;
-	transform: translateY(-30%);
+	left: 40vw;
+	transform: translateY(-40%);
+
+	}
 
 &__btn {
 	position: relative;
@@ -12,6 +19,7 @@
 }
 
 &__name {
+
 }
 
 }

@@ -15,6 +15,7 @@
 	right: 50px;
 	top: 10px;
 	z-index: -9;
+	cursor: pointer;
 }
 
 &--arrow-tab {

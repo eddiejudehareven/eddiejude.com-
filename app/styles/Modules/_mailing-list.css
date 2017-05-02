@@ -1,22 +1,32 @@
 .mailing-list {
+
+	@mixin atMedium {
 	position: absolute;
 	top: 40px;
-	left: 19%;
+	left: 30%;
+	} 
 
 
 &--title {
 	position: absolute;
 	top: 0;
+	left: 25%;
 }
 
 &__button {
 	position: absolute;
-	bottom: 10px;
+	top: 40%;
+	left: 40%;
 	background-color: $mainPurple;
 	text-decoration: none;
 	font-size: .75rem;
-	padding: .75rem 1rem;
-	display: inline-block;
+	/*padding: .75rem 1rem;*/
+}
+
+&__content {
+	position: absolute;
+	left: 25%;
+	top: 30%;
 }
 
 }

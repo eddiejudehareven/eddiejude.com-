@@ -818,6 +818,7 @@ a:hover {
   right: 50px;
   top: 10px;
   z-index: -9;
+  cursor: pointer;
 }
 .site-header--arrow-tab {
   opacity: 0;
@@ -1058,16 +1059,18 @@ a:hover {
 .modal__close:hover {/* X changes color when hovered over */
   color: #eeab26;
 }
-.social-icons {
+/*.social-icons {
 	text-align: center;
-}
-.social-icons__icon {
-  background-color: #eeab26;
-  display: inline-block;
-}
-.social-icons__icon .icon {
-  display: block;
-}
+
+	&__icon {
+		background-color: $mainGold; 
+		display: inline-block;
+
+		.icon {
+			display: block;
+		}
+	}
+}*/
 .mobile-nav__content {
   display: none;
 }
@@ -1104,6 +1107,7 @@ a:hover {
   top: 10px;
   right: 10px;
   z-index: 10;
+  cursor: pointer;
 }
 .mobile-nav__menu-icon__middle {/*CSS for the 3 line sandwich nav symbol */
   position: absolute;
@@ -1167,33 +1171,46 @@ a:hover {
           transform: rotate(-45deg) scaleX(1.25) translateY(1px);
   z-index: 99;
 }
-.mailing-list {
-	position: absolute;
-	top: 40px;
-	left: 19%;
-
+@media (min-width: 800px) {
+  .mailing-list {
+    position: absolute;
+    top: 40px;
+    left: 30%;
+  }
 }
 .mailing-list--title {
   position: absolute;
   top: 0;
+  left: 25%;
 }
 .mailing-list__button {
   position: absolute;
-  bottom: 10px;
+  top: 40%;
+  left: 40%;
   background-color: #945779;
   text-decoration: none;
-  font-size: .75rem;
-  padding: .75rem 1rem;
-  display: inline-block;
+  font-size: .75rem;/*padding: .75rem 1rem;*/
+}
+.mailing-list__content {
+  position: absolute;
+  left: 25%;
+  top: 30%;
 }
 .contact-form {
-	overflow: hidden; /*why doesn't this work?*/ 
-	font-size: 18px;
-	position: absolute;
-	right: 38%;
-	-webkit-transform: translateY(-30%);
-	        transform: translateY(-30%);
+	left: 50vw;
+	-webkit-transform: translateX(30%);
+	        transform: translateX(30%);
 
+}
+/*overflow: hidden;*/
+@media (min-width: 800px) {
+  .contact-form {/*overflow: hidden;*//*why doesn't this work?*/
+    font-size: 25px;
+    position: absolute;
+    left: 40vw;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
 }
 .contact-form__btn {
   position: relative;
