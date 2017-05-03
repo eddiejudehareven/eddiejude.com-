@@ -101,6 +101,7 @@
 			this.mobileNav = (0, _jquery2.default)(".mobile-nav");
 			this.menuIcon = (0, _jquery2.default)(".mobile-nav__menu-icon");
 			this.menuContent = (0, _jquery2.default)(".mobile-nav__content");
+			this.body = (0, _jquery2.default)("body");
 			this.events();
 		}
 
@@ -115,6 +116,7 @@
 				this.menuContent.toggleClass("mobile-nav__content--is-visible");
 				// this.siteHeader.toggleClass("mobile-nav--is-expanded");
 				this.menuIcon.toggleClass("mobile-nav__menu-icon--close-x");
+				this.body.toggleClass("appear");
 			}
 		}]);
 

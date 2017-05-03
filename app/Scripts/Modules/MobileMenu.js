@@ -5,6 +5,7 @@ class MobileMenu {
 		this.mobileNav = $(".mobile-nav");
 		this.menuIcon = $(".mobile-nav__menu-icon");
 		this.menuContent = $(".mobile-nav__content");
+		this.body = $("body");
 		this.events();
 	}
 
@@ -17,6 +18,7 @@ class MobileMenu {
 		this.menuContent.toggleClass("mobile-nav__content--is-visible");
 		// this.siteHeader.toggleClass("mobile-nav--is-expanded");
 		this.menuIcon.toggleClass("mobile-nav__menu-icon--close-x");
+		this.body.toggleClass("appear");
 	}
 
 }
