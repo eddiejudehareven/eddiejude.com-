@@ -1,0 +1,41 @@
+.contact-form {
+	left: 50vw;
+	transform: translateX(30%);
+
+	@mixin atMedium {
+	font-size: 20px;
+	position: absolute;
+	left: 30vw;
+	top:  -5vw;
+	/*transform: translateY(-20%);*/
+
+	}
+
+&__btn {
+	position: relative;
+	padding: .50rem .50rem;
+	bottom: 2vw;
+	left: 1vw;
+	cursor: pointer;
+}
+
+&__name {
+	height: 50px;
+	margin: 0 0 1em 0;
+	border: 2px solid #945779;
+
+}
+
+&__email {
+	height: 50px;
+	margin: 0 0 1em 0;
+	border: 2px solid #945779;
+}
+
+&__message {
+	height: 150px;
+	width: 300px;
+	border: 2px solid #945779;
+}
+
+}

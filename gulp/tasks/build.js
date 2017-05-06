@@ -20,13 +20,13 @@ gulp.task('deleteDistFolder', function() {
   return del("./dist");
 });
 
-gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
+gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() { 
   var pathsToCopy = [
     './app/**/*',
-    '!./app/index.html',
-    '!./app/images/**',
-    '!./app/styles/**',
-    '!./app/Scripts/**',
+    '!./app/index.html', /* usemin task */
+    '!./app/images/**', /* optimize images */
+    '!./app/styles/**', /* rev nano uglify */ 
+    '!./app/Scripts/**', /* rev nano ugify */
     '!./app/temp',
     '!./app/temp/**'
   ]

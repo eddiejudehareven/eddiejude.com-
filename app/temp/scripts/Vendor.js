@@ -40,18 +40,16 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(8);
+	__webpack_require__(1);
 
 /***/ },
-
-/***/ 8:
+/* 1 */
 /***/ function(module, exports) {
 
 	(function(window, factory) {
@@ -747,5 +745,4 @@
 
 
 /***/ }
-
-/******/ });
+/******/ ]);

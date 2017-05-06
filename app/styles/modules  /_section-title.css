@@ -1,0 +1,19 @@
+.section-title { /* reusable block for all section titles*/
+	font-size: 2.55rem;
+	font-weight: 400;
+	text-align: center;
+
+@mixin atSmall {
+	font-size: 3rem;
+}
+
+&--grey {
+	color: $mainGrey;
+	opacity: .8;
+}
+
+&--less-margin {
+	margin-bottom: 1.3rem;
+	margin-top: 0rem;
+}
+}

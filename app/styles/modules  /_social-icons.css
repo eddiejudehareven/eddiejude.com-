@@ -1,0 +1,12 @@
+/*.social-icons {
+	text-align: center;
+
+	&__icon {
+		background-color: $mainGold; 
+		display: inline-block;
+
+		.icon {
+			display: block;
+		}
+	}
+}*/

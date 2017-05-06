@@ -1,0 +1,25 @@
+
+.btn {
+	background-color: $mainPurple; 
+	color: #FFF;
+	text-decoration: none;
+	padding: .75rem 1.2rem;
+	display: inline-block;
+
+&--orange {
+	background-color: $mainPurple;
+}
+
+&--orange-footer {
+	float: center;
+	transform: translateY(-30%);
+}
+
+&--large {
+	padding: 1.2rem 1.5rem;
+
+@mixin atSmall {
+	font-size: 1.25rem;
+}
+}
+}
