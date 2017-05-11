@@ -1,0 +1,30 @@
+.footer-nav-bar {
+
+ul { /* parent of li */
+	margin: 0;
+	padding-left: 40px;
+	@mixin clearfix; /* clears floats */
+}
+
+li {
+	list-style: none;  gets rid of bullet points 
+	display: inline;
+	width: 15%;
+}
+
+a { /*targets any links */
+	position: relative;
+	color: #FFF;
+	font-size: 0.8rem;
+	text-decoration: none; /* gets rid of underlines */
+	display: block; /* turns links into block element */
+	padding: 5px 5px;
+	bottom: 1vw;
+
+	&:hover {
+		color: $mainGold;
+}
+
+}
+
+}

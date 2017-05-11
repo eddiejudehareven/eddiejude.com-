@@ -1,0 +1,18 @@
+.generic-content-container {
+
+	p {
+		font-weight: 300;
+		line-height: 1.25;
+		margin: 0 0 1rem 0; /* css shorthand for margins - goes in clockwise fashion */
+		font-size: 1rem; /* default font size for browser - does not need to written */
+
+	@mixin atSmall {
+		font-size: 1rem;  /*font size change once screens are larger than small */
+		line-height: 1.65;
+	}
+	}
+
+	p a {					/* descendent selector targets all links within a paragraph */
+		font-weight: 700;  
+	}
+}

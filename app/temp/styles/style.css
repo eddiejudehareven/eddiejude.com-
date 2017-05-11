@@ -768,40 +768,20 @@ a:hover {
   }
 }
 .site-footer {
-	position: relative;
+
 	background-color: black;
-	color: white;
-	padding: .5rem 0;  /* padding so that the margin on the paragraph isn't visibly portruding out of the container div */
-	text-align: left; 
-	font-size: 0.7rem;
+	position: absolute;
+	padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
+	width: 100%;
 
 }
-.site-footer ul {/* parent of li */
-  margin: 0;
-  padding-left: 30px;/* clears floats */
-}
-.site-footer ul::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.site-footer li {
-  list-style: none;/* gets rid of bullet points */
-  display: inline;
-}
-.site-footer a {/*targets any links */
+.site-footer__title {
   position: relative;
-  color: #FFF;
-  font-size: 0.7rem;
-  text-decoration: none;/* gets rid of underlines */
-  display: block;/* turns links into block element */
-  padding: 5px 5px;
-}
-.site-footer a:hover {
-  color: #eeab26;
-}
-.site-footer__text-content {
-  position: relative;
+  left: 5vw;
+  bottom: .5vw;
+  color: white;
+  text-align: left;
+  font-size: 0.9rem;
 }
 .site-header {
 	position: absolute; /* brings up header image so that header can be placed over top */
@@ -810,7 +790,6 @@ a:hover {
 	height: 5%;
 	/*bring header to front. whatever element has a higher z index will be layered on top*/
 	padding: 10px 0;
-	-webkit-transition: background-color .3s ease-out;
 	transition: background-color .3s ease-out;
 }
 .site-header--arrow--displayed {
@@ -902,7 +881,6 @@ a:hover {
   font-size: 1rem;
   opacity: 0.9;
   z-index: 9;
-  -webkit-transition: -webkit-transform .5 ease-out;
   transition: -webkit-transform .5 ease-out;
   transition: transform .5 ease-out;
   transition: transform .5 ease-out, -webkit-transform .5 ease-out;
@@ -1006,7 +984,6 @@ a:hover {
 }
 .reveal-item {
 	opacity: 0;
-	-webkit-transition: opacity 1.5s ease-out;
 	transition: opacity 1.5s ease-out;
 }
 .reveal-item--is-visible {
@@ -1024,7 +1001,6 @@ a:hover {
 	visibility: hidden; /* hides modal overlay until clicked */ 
 	-webkit-transform: scale(1.2); 
 	        transform: scale(1.2);
-	-webkit-transition: all .3 ease-out;
 	transition: all .3 ease-out;
 
 }
@@ -1091,7 +1067,6 @@ a:hover {
   background-color: black;
   opacity: .9;
   overflow-x: hidden;/*disables horizontal scrolling*/
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .mobile-nav li {
@@ -1121,7 +1096,6 @@ a:hover {
   height: 3px;
   right: 10px;
   background-color: #945779;
-  -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
           transform-origin: 0 50%;/* changes the centre origin of the line from middle to right side */
@@ -1135,7 +1109,6 @@ a:hover {
   height: 3px;
   right: 10px;
   background-color: #945779;
-  -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
           transform-origin: 0 50%;/* changes the centre origin of the line from middle to right side */
@@ -1149,7 +1122,6 @@ a:hover {
   height: 3px;
   right: 10px;
   background-color: #945779;
-  -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
           transform-origin: 0 50%;/* changes the centre origin of the line from middle to right side */
@@ -1175,30 +1147,41 @@ a:hover {
           transform: rotate(-45deg) scaleX(1.25) translateY(1px);
   z-index: 99;
 }
-@media (min-width: 800px) {
-  .mailing-list {
-    position: absolute;
-    top: 40px;
-    left: 30%;
-  }
+.mailing-list {
+position: absolute;
+top: 0;
+left: 30vw;
 }
-.mailing-list--title {
-  position: absolute;
-  top: 0;
-  left: 25%;
+.mailing-list ul {
+  width: 50%;
 }
-.mailing-list__button {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  background-color: #945779;
-  text-decoration: none;
-  font-size: .75rem;/*padding: .75rem 1rem;*/
+.mailing-list__title {
+  color: white;
+  text-align: left;
+  font-size: 0.9rem;
+  position: relative;
+  right: 12vw;
+  width: 100%;
 }
-.mailing-list__content {
+.mailing-list__name {
+  border: 2px solid #945779;
+  height: 30px;
   position: absolute;
-  left: 25%;
-  top: 30%;
+  top: 3vw;
+  right: 10vw;
+}
+.mailing-list__email {
+  border: 2px solid #945779;
+  height: 30px;
+  position: absolute;
+  top: 7vw;
+  right: 10vw;
+}
+.mailing-list__btn {
+  position: absolute;
+  left: 3vw;
+  top: 5vw;
+  padding: .50rem .5rem;
 }
 .contact-form {
 	left: 50vw;
@@ -1236,6 +1219,33 @@ a:hover {
   width: 300px;
   border: 2px solid #945779;
 }
+.footer-nav-bar ul {/* parent of li */
+  margin: 0;
+  padding-left: 40px;/* clears floats */
+}
+.footer-nav-bar ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.footer-nav-bar li {
+  list-style: none;
+  gets rid of bullet points 
+	display: inline;
+  width: 15%;
+}
+.footer-nav-bar a {/*targets any links */
+  position: relative;
+  color: #FFF;
+  font-size: 0.8rem;
+  text-decoration: none;/* gets rid of underlines */
+  display: block;/* turns links into block element */
+  padding: 5px 5px;
+  bottom: 1vw;
+}
+.footer-nav-bar a:hover {
+  color: #eeab26;
+} 
 
 
 

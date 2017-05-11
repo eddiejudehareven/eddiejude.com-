@@ -1,0 +1,50 @@
+body {
+	font-family: 'Raleway','Assistant','Roboto', sans-serif;  
+	color: $mainGrey;
+}
+
+.appear { /* hides overflow on small screens*/
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul { /* parent of li */
+	margin: 0;
+	padding-left: 30px;
+
+	@mixin clearfix; /* clears floats */
+
+}
+
+a { /*targets any links */
+	position: relative;
+	color: $mainPurple;
+	font-weight: 300;
+	text-decoration: none; /* gets rid of underlines */
+	display: block; /* turns links into block element */
+	padding: 15px 15px;
+	font-size: .8rem;
+
+	&:hover {
+		color: $mainGold;
+}
+	@mixin atMedium {
+		position: relative;
+		color: white;
+		padding: 10px 0;
+		font-size: .8rem;
+		background-color: transparent;
+
+		$.is-current-link {
+			color: #fabb69;
+		}
+
+	}
+}

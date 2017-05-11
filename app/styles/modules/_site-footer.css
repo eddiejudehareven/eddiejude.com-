@@ -1,0 +1,17 @@
+.site-footer {
+
+	background-color: black;
+	position: absolute;
+	padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
+	width: 100%;
+
+&__title {
+	position: relative;
+	left: 5vw;
+	bottom: .5vw;
+	color: white;
+	text-align: left; 
+	font-size: 0.9rem;
+}
+
+}
