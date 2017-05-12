@@ -4,6 +4,7 @@ class Modal {
 	constructor() {
 		this.openModalButton = $(".open-modal");
 		this.modal = $(".modal");
+		this.askMe = $(".modal__AskMe");
 		this.closeModalButton = $(".modal__close");
 		this.events(); //calls the event method
 	}
@@ -15,6 +16,8 @@ class Modal {
 
 		this.closeModalButton.click(this.closeModal.bind(this)); //when the X is clicked run the closeModal method //
 		//pushes any escape key
+		this.askMe.click(this.openModal.bind(this));
+		//click on ask me link
 		$(document).keyup(this.keyPressHandler.bind(this));
 	}
 
@@ -27,10 +30,13 @@ class Modal {
 	openModal() {
 		this.modal.addClass("modal__is-visible"); //js will add this class when clicked // 
 		return false; // prevents scroll up of link href with just a # sign //
+		this.askMe.addClass("modal__AskMe__is-visible");
+		return false;
 	}
 
 	closeModal() {
 		this.modal.removeClass("modal__is-visible"); 
+		this.askMe.removeClass("modal__AskMe__is-visible");
 	}
 
 }

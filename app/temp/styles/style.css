@@ -769,10 +769,10 @@ a:hover {
 }
 .site-footer {
 
-	background-color: black;
-	position: absolute;
-	padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
-	width: 100%;
+		background-color: black;
+		position: absolute;
+		padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
+		width: 100%;
 
 }
 .site-footer__title {
@@ -1005,6 +1005,12 @@ a:hover {
 
 }
 .modal__is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.modal__modal__AskMe__is-visible {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);

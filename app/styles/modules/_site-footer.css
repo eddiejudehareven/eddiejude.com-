@@ -1,9 +1,9 @@
 .site-footer {
 
-	background-color: black;
-	position: absolute;
-	padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
-	width: 100%;
+		background-color: black;
+		position: absolute;
+		padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
+		width: 100%;
 
 &__title {
 	position: relative;
@@ -12,6 +12,7 @@
 	color: white;
 	text-align: left; 
 	font-size: 0.9rem;
+
 }
 
 }

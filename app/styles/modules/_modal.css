@@ -17,6 +17,12 @@
 		transform: scale(1);
 	}
 
+	&__modal__AskMe__is-visible {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
 	&__inner {
 		position: absolute;
 		width: 100%; /* so width is not shrunken by position aboslute */ 
