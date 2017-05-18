@@ -19,7 +19,7 @@ gulp.task('watch', function() {
     gulp.start('cssInject');
   });
 
-  watch('./app/Scripts/**/*.js', function() {
+  watch('./app/scripts/**/*.js', function() {
     gulp.start('scriptsRefresh');
   })
 

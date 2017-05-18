@@ -43,16 +43,16 @@
 /******/ ({
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	__webpack_require__(8);
 
-/***/ },
+/***/ }),
 
 /***/ 8:
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	(function(window, factory) {
 		var lazySizes = factory(window, window.document);
@@ -746,6 +746,6 @@
 	));
 
 
-/***/ }
+/***/ })
 
 /******/ });

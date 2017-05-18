@@ -1,7 +1,7 @@
 .mailing-list {
 position: absolute;
 top: 0;
-left: 30vw;
+left: 20vw;
 
 ul {
 	width: 50%;
@@ -11,33 +11,21 @@ ul {
 	color: white;
 	text-align: left; 
 	font-size: 0.9rem;
-	position: relative;
-	right: 12vw;
-	width: 100%;
 
 }
 
 &__name {
 	border: 2px solid #945779;
-	height: 30px;
-	position: absolute;
-	top: 3vw;
-	right: 10vw;
+
 }
 
 &__email {
 	border: 2px solid #945779;
-	height: 30px;
-	position: absolute;
-	top: 7vw;
-	right: 10vw;
+	
 }
 
 &__btn {
-position: absolute;
-left: 3vw;
-top: 5vw;
-padding: .50rem .5rem;
+padding: 0rem .5rem;
 
 }
 }

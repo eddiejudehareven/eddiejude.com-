@@ -422,6 +422,7 @@ h1 {
 body {
 	font-family: 'Raleway','Assistant','Roboto', sans-serif;  
 	color: #242424;
+	overflow-x: hidden;
 }
 .appear { /* hides overflow on small screens*/
 	overflow: hidden;
@@ -768,12 +769,17 @@ a:hover {
   }
 }
 .site-footer {
+	display: none;
 
-		background-color: black;
-		position: absolute;
-		padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
-		width: 100%;
-
+}
+@media (min-width: 800px) {
+  .site-footer {
+    display: block;
+    background-color: black;
+    position: absolute;
+    padding: .5rem 0;/* so that the margin on the paragraph isn't visibly portruding out of the container div */
+    width: 100%;
+  }
 }
 .site-footer__title {
   position: relative;
@@ -782,6 +788,12 @@ a:hover {
   color: white;
   text-align: left;
   font-size: 0.9rem;
+}
+.site-footer__text {
+  color: #FFF;
+  font-size: .8rem;
+  position: relative;
+  left: 40%;
 }
 .site-header {
 	position: absolute; /* brings up header image so that header can be placed over top */
@@ -1156,7 +1168,7 @@ a:hover {
 .mailing-list {
 position: absolute;
 top: 0;
-left: 30vw;
+left: 20vw;
 }
 .mailing-list ul {
   width: 50%;
@@ -1165,32 +1177,18 @@ left: 30vw;
   color: white;
   text-align: left;
   font-size: 0.9rem;
-  position: relative;
-  right: 12vw;
-  width: 100%;
 }
 .mailing-list__name {
   border: 2px solid #945779;
-  height: 30px;
-  position: absolute;
-  top: 3vw;
-  right: 10vw;
 }
 .mailing-list__email {
   border: 2px solid #945779;
-  height: 30px;
-  position: absolute;
-  top: 7vw;
-  right: 10vw;
 }
 .mailing-list__btn {
-  position: absolute;
-  left: 3vw;
-  top: 5vw;
-  padding: .50rem .5rem;
+  padding: 0rem .5rem;
 }
 .contact-form {
-	left: 50vw;
+	left: 40vw;
 	-webkit-transform: translateX(30%);
 	        transform: translateX(30%);
 
@@ -1200,15 +1198,13 @@ left: 30vw;
     font-size: 20px;
     position: absolute;
     left: 30vw;
-    top: -5vw;/*transform: translateY(-20%);*/
+    top: -8vw;/*transform: translateY(-20%);*/
   }
 }
 .contact-form__btn {
-  position: relative;
-  padding: .50rem .50rem;
-  bottom: 2vw;
-  left: 1vw;
+  padding: 0rem .50rem;
   cursor: pointer;
+  width: 300px;
 }
 .contact-form__name {
   height: 50px;

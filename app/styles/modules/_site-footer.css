@@ -1,9 +1,14 @@
 .site-footer {
+	display: none;
 
-		background-color: black;
-		position: absolute;
-		padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
-		width: 100%;
+	@mixin atMedium {
+	display: block; 
+	background-color: black;
+	position: absolute;
+	padding: .5rem 0; /* so that the margin on the paragraph isn't visibly portruding out of the container div */ 
+	width: 100%;
+	}
+	
 
 &__title {
 	position: relative;
@@ -12,6 +17,14 @@
 	color: white;
 	text-align: left; 
 	font-size: 0.9rem;
+
+}
+
+&__text {
+	color: #FFF;
+	font-size: .8rem;
+	position: relative;
+	left: 40%;
 
 }
 

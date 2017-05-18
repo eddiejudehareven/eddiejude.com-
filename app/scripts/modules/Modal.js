@@ -28,6 +28,7 @@ class Modal {
 	}
 
 	openModal() {
+		console.log('opening modal')
 		this.modal.addClass("modal__is-visible"); //js will add this class when clicked // 
 		return false; // prevents scroll up of link href with just a # sign //
 		this.askMe.addClass("modal__AskMe__is-visible");

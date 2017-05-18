@@ -45,7 +45,7 @@ gulp.task('optimizeImages', ['deleteDistFolder'], function() {
     .pipe(gulp.dest("./dist/images"));
 });
 
-gulp.task('usemin', ['deleteDistFolder', 'styles', 'Scripts'], function() {
+gulp.task('usemin', ['deleteDistFolder', 'styles', 'scripts'], function() {
   return gulp.src("./app/index.html")
     .pipe(usemin({
       css: [function() {return rev()}, function() {return cssnano()}],

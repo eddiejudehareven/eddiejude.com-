@@ -1,6 +1,7 @@
 body {
 	font-family: 'Raleway','Assistant','Roboto', sans-serif;  
 	color: $mainGrey;
+	overflow-x: hidden;
 }
 
 .appear { /* hides overflow on small screens*/
