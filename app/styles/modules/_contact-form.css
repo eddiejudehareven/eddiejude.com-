@@ -1,13 +1,15 @@
 .contact-form {
+	position: absolute;
 	left: 40vw;
-	transform: translateX(30%);
+	transform: translateX(-30%);
 
 	@mixin atMedium {
 	font-size: 20px;
 	position: absolute;
 	left: 30vw;
 	top:  -8vw;
-	/*transform: translateY(-20%);*/
+	transform: translateY(-20%);
+
 
 	}
 

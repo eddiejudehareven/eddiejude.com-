@@ -11,10 +11,13 @@
 	transform: scale(1.2);
 	transition: all .3 ease-out; 
 
+
 	&__is-visible {
 		opacity: 1;
 		visibility: visible;
 		transform: scale(1);
+		max-width: 100%;
+	margin: auto;
 	}
 
 	&__modal__AskMe__is-visible {

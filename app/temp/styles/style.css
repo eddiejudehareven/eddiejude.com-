@@ -670,7 +670,7 @@ a:hover {
   border-top: 10px solid #d05493;
 }
 .section-title { /* reusable block for all section titles*/
-	font-size: 2.55rem;
+	font-size: 1.8rem;
 	font-weight: 400;
 	text-align: center;
 }
@@ -1021,6 +1021,8 @@ a:hover {
   visibility: visible;
   -webkit-transform: scale(1);
           transform: scale(1);
+  max-width: 100%;
+  margin: auto;
 }
 .modal__modal__AskMe__is-visible {
   opacity: 1;
@@ -1188,9 +1190,10 @@ left: 20vw;
   padding: 0rem .5rem;
 }
 .contact-form {
+	position: absolute;
 	left: 40vw;
-	-webkit-transform: translateX(30%);
-	        transform: translateX(30%);
+	-webkit-transform: translateX(-30%);
+	        transform: translateX(-30%);
 
 }
 @media (min-width: 800px) {
@@ -1198,7 +1201,9 @@ left: 20vw;
     font-size: 20px;
     position: absolute;
     left: 30vw;
-    top: -8vw;/*transform: translateY(-20%);*/
+    top: -8vw;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
   }
 }
 .contact-form__btn {
