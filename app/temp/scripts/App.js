@@ -11295,10 +11295,12 @@
 		function Modal() {
 			_classCallCheck(this, Modal);
 
+			// these are all jquery selectors [except this.events()]
+			// we use these to 'select' the elements on the page that we want to operate on
 			this.openModalButton = (0, _jquery2.default)(".open-modal");
 			this.modal = (0, _jquery2.default)(".modal");
-			this.askMe = (0, _jquery2.default)(".modal__AskMe");
 			this.closeModalButton = (0, _jquery2.default)(".modal__close");
+			this.body = (0, _jquery2.default)("body");
 			this.events(); //calls the event method
 		}
 
@@ -11311,8 +11313,6 @@
 
 				this.closeModalButton.click(this.closeModal.bind(this)); //when the X is clicked run the closeModal method //
 				//pushes any escape key
-				this.askMe.click(this.openModal.bind(this));
-				//click on ask me link
 				(0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
 			}
 		}, {
@@ -11328,15 +11328,14 @@
 			value: function openModal() {
 				console.log('opening modal');
 				this.modal.addClass("modal__is-visible"); //js will add this class when clicked // 
+				this.body.addClass("body__modal__is-visible");
 				return false; // prevents scroll up of link href with just a # sign //
-				this.askMe.addClass("modal__AskMe__is-visible");
-				return false;
 			}
 		}, {
 			key: "closeModal",
 			value: function closeModal() {
 				this.modal.removeClass("modal__is-visible");
-				this.askMe.removeClass("modal__AskMe__is-visible");
+				this.body.removeClass("body__modal__is-visible");
 			}
 		}]);
 

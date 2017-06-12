@@ -23,4 +23,11 @@
 		clear: both;
 		display: table;
 	}
+
+@define-mixin atLandscape {
+	@media (min-width: 500px){
+		@mixin-content; 
+	}
+}
+
 }

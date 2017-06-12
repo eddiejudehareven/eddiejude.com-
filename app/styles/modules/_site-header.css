@@ -7,7 +7,8 @@
 	padding: 10px 0;
 	transition: background-color .3s ease-out;
 
-&--arrow--displayed {
+
+&--arrow--displayed { /* positioning for when js displays menu */ 
 	transform: translateY(20px);
 }
 
@@ -19,7 +20,21 @@
 	cursor: pointer;
 }
 
-&--arrow-tab {
+&--arrow-other {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+	border-top: 50px solid black;
+	float: right;
+
+	@mixin atMedium {
+		opacity: 1;
+	}
+}
+
+/*&--arrow-tab {
 	opacity: 0;
 	float: right;
 	position: relative;
@@ -29,16 +44,16 @@
 	height: 10px;
 	background-color: black;
 	/*transform: translateY(40%);*/
-
+/*
 	@mixin atMedium {
 		opacity: 1;
 
 	}
 
-}
+}*/
 
-&--arrow-tab::after { /* makes triangle */ 
-	content: "";
+/*&--arrow-tab::after { /* makes triangle */ 
+/*	content: "";
 	position: absolute;
 	top: 100%;
 	background-color: black;
@@ -47,9 +62,9 @@
 	transform: translateX(-70%);
 
 	clip-path: polygon(0 0, 100% 0, 50% 100%);
-}
+}*/
 
-&--arrow-text {
+/*&--arrow-text {
 	opacity: 0;
 	float: right;
 	position: relative;
@@ -58,6 +73,22 @@
 	z-index: 1;
 	right: 5px;
 	top: 5px;
+
+	@mixin atMedium {
+		opacity: 1;
+	}
+}*/
+
+&--arrow-text-other {
+	opacity: 0;
+	float: right;
+	position: relative;
+	display: block;
+	color: white;
+	z-index: 2;
+	right: -20px;
+	top: -45px;
+	
 
 	@mixin atMedium {
 		opacity: 1;
@@ -88,6 +119,7 @@
 	float: right;
 	transform: translateY(-150%)
 }
+
 
 }
 

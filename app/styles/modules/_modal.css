@@ -17,7 +17,7 @@
 		visibility: visible;
 		transform: scale(1);
 		max-width: 100%;
-	margin: auto;
+		margin: auto;
 	}
 
 	&__modal__AskMe__is-visible {
@@ -54,5 +54,14 @@
 			color: $mainGold;
 	}
 }
-
 }
+
+.body__modal__is-visible {
+	overflow-y: hidden;
+}
+
+
+
+
+/*
+}*/

@@ -804,7 +804,7 @@ a:hover {
 	padding: 10px 0;
 	transition: background-color .3s ease-out;
 }
-.site-header--arrow--displayed {
+.site-header--arrow--displayed {/* positioning for when js displays menu */
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
 }
@@ -815,54 +815,65 @@ a:hover {
   z-index: -9;
   cursor: pointer;
 }
-.site-header--arrow-tab {
+.site-header--arrow-other {
   opacity: 0;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 50px solid black;
   float: right;
-  position: relative;
-  display: block;
-  bottom: 10px;
-  width: 10px;
-  height: 10px;
-  background-color: black;
 }
-/*transform: translateY(40%);*/
 @media (min-width: 800px) {
-  .site-header--arrow-tab {
+  .site-header--arrow-other {
     opacity: 1;
   }
 }
-.site-header--arrow-tab::after {/* makes triangle */
-  content: "";
-  position: absolute;
-  top: 100%;
-  background-color: black;
-  width: 130px;
-  height: 50px;
-  -webkit-transform: translateX(-70%);
-          transform: translateX(-70%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
-          clip-path: polygon(0 0, 100% 0, 50% 100%);
-}
-.site-header--arrow-text {
+/*&--arrow-text {
+	opacity: 0;
+	float: right;
+	position: relative;
+	display: block;
+	color: white;
+	z-index: 1;
+	right: 5px;
+	top: 5px;
+
+	@mixin atMedium {
+		opacity: 1;
+	}
+}*/
+.site-header--arrow-text-other {
   opacity: 0;
   float: right;
   position: relative;
   display: block;
   color: white;
-  z-index: 1;
-  right: 5px;
-  top: 5px;
+  z-index: 2;
+  right: -20px;
+  top: -45px;
 }
 @media (min-width: 800px) {
-  .site-header--arrow-text {
+  .site-header--arrow-text-other {
     opacity: 1;
   }
 }
+/*	content: "";
+	position: absolute;
+	top: 100%;
+	background-color: black;
+	width: 130px;
+	height: 50px;
+	transform: translateX(-70%);
+
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+}*/
 .site-header--is-expanded {
   height: 15%;
   background-color: ;
   opacity: 1;
 }
+/*&--arrow-tab::after { /* makes triangle */
 @media (min-width: 800px) {
   .site-header {/* we're moving the black bar to its own element! *//*background-color: black;*//* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
     position: fixed;/* sticky header *//*&--dark {
@@ -870,6 +881,13 @@ a:hover {
 	}*/
   }
 }
+/*
+	@mixin atMedium {
+		opacity: 1;
+
+	}
+
+}*/
 .site-header__btn-container {
   display: none;
 }
@@ -881,6 +899,16 @@ a:hover {
             transform: translateY(-150%);
   }
 }
+/*&--arrow-tab {
+	opacity: 0;
+	float: right;
+	position: relative;
+	display: block;
+	bottom: 10px;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	/*transform: translateY(40%);*/
 .site-header__title {
   color: #242424;
   background-color: white;
@@ -1014,7 +1042,6 @@ a:hover {
 	-webkit-transform: scale(1.2); 
 	        transform: scale(1.2);
 	transition: all .3 ease-out;
-
 }
 .modal__is-visible {
   opacity: 1;
@@ -1059,6 +1086,11 @@ a:hover {
 .modal__close:hover {/* X changes color when hovered over */
   color: #eeab26;
 }
+.body__modal__is-visible {
+	overflow-y: hidden;
+}
+/*
+}*/
 /*.social-icons {
 	text-align: center;
 
@@ -1190,41 +1222,79 @@ left: 20vw;
   padding: 0rem .5rem;
 }
 .contact-form {
+
 	position: absolute;
 	left: 40vw;
+	bottom: -20vw;
 	-webkit-transform: translateX(-30%);
 	        transform: translateX(-30%);
 
 }
+/*
+	@mixin atLandscape {
+		display: inline-block;
+		position: relative;
+		top: 2vw;
+	}*/
+.contact-form__btn {
+  padding: 0rem .5rem;
+  cursor: pointer;
+  width: 300px;/*	@mixin atLandscape {
+		position: relative;
+		left: 5vw;
+	}*/
+}
 @media (min-width: 800px) {
-  .contact-form {
-    font-size: 20px;
-    position: absolute;
-    left: 30vw;
-    top: -8vw;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+  .contact-form__btn {
+    padding: 0rem .50rem;
+    cursor: pointer;
+    width: 300px;
   }
 }
-.contact-form__btn {
-  padding: 0rem .50rem;
-  cursor: pointer;
-  width: 300px;
-}
+/*@mixin atMedium {
+	font-size: 20px;
+	left: 10vw;
+	}*/
 .contact-form__name {
+  width: 20vw;
   height: 50px;
   margin: 0 0 1em 0;
-  border: 2px solid #945779;
+  border: 2px solid #945779;/*@mixin atLandscape {
+		height: 40px;
+		width: 200px;
+		position: relative;
+		left: 5vw;
+		bottom: 1vw;
+	}*/
 }
+@media (min-width: 800px) {}
 .contact-form__email {
+  width: 20vw;
   height: 50px;
   margin: 0 0 1em 0;
-  border: 2px solid #945779;
+  border: 2px solid #945779;/*	@mixin atLandscape {
+	height: 40px;
+	width: 200px;
+	position: relative;
+	left: 10vw;
+	bottom: 1vw;
+	}*/
 }
+@media (min-width: 800px) {}
 .contact-form__message {
   height: 150px;
   width: 300px;
-  border: 2px solid #945779;
+  border: 2px solid #945779;/*@mixin atLandscape {
+		position: relative;
+		left: 5vw; 
+	}*/
+}
+@media (min-width: 800px) {
+  .contact-form__message {
+    height: 150px;
+    width: 400px;
+    border: 2px solid #945779;
+  }
 }
 .footer-nav-bar ul {/* parent of li */
   margin: 0;
