@@ -6,20 +6,18 @@
 	padding: .75rem 1.2rem;
 	display: inline-block;
 
-&--orange {
-	background-color: $mainPurple;
-}
-
 &--orange-footer {
 	float: center;
 	transform: translateY(-30%);
 }
 
 &--large {
-	padding: 1.2rem 1.5rem;
+	display: none;
 
-@mixin atSmall {
-	font-size: 1.25rem;
+@mixin atMedium {
+	display: inline-block;
+	padding: 1.4rem 2rem;
+	font-size: 1rem;
 }
 }
 }

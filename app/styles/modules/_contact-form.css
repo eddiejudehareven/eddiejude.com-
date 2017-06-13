@@ -1,90 +1,34 @@
 .contact-form {
 
 	position: absolute;
-	left: 40vw;
-	bottom: -20vw;
+	left: 45vw;
+	top: -20vw;
 	transform: translateX(-30%);
 
-	/*@mixin atMedium {
-	font-size: 20px;
-	left: 10vw;
-	}*/
-/*
-	@mixin atLandscape {
-		display: inline-block;
-		position: relative;
-		top: 2vw;
-	}*/
-
 &__btn {
-	padding: 0rem .5rem;
 	cursor: pointer;
-	width: 300px;
-
-	@mixin atMedium {
-	padding: 0rem .50rem;
-	cursor: pointer;
-	width: 300px;
-	}
-
-/*	@mixin atLandscape {
-		position: relative;
-		left: 5vw;
-	}*/
+	width: 185px;
 }
 
 &__name {
-	width: 20vw;
-	height: 50px;
+	/*width: 300px;*/
+	height: 40px;
 	margin: 0 0 1em 0;
 	border: 2px solid #945779;
-
-	@mixin atMedium {
-	}
-
-	/*@mixin atLandscape {
-		height: 40px;
-		width: 200px;
-		position: relative;
-		left: 5vw;
-		bottom: 1vw;
-	}*/
 }
 
 &__email {
-	width: 20vw;
-	height: 50px;
+	/*width: 300px;*/
+	height: 40px;
 	margin: 0 0 1em 0;
 	border: 2px solid #945779;
-
-	@mixin atMedium {
-	}
-
-/*	@mixin atLandscape {
-	height: 40px;
-	width: 200px;
-	position: relative;
-	left: 10vw;
-	bottom: 1vw;
-	}*/
 
 }
 
 &__message {
-	height: 150px;
-	width: 300px;
+	height: 100px;
+	/*width: 300px;*/
 	border: 2px solid #945779;
-
-	@mixin atMedium {
-	height: 150px;
-	width: 400px;
-	border: 2px solid #945779;
-	}
-
-	/*@mixin atLandscape {
-		position: relative;
-		left: 5vw; 
-	}*/
 
 }
 
