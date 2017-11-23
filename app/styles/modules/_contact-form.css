@@ -1,9 +1,12 @@
 .contact-form {
 
-	position: absolute;
+	/*position: absolute;
 	left: 45vw;
 	top: -30vh;
-	transform: translateX(-30%);
+	transform: translateX(-30%);*/
+	width: 250px;
+	margin: 0 auto;
+	padding-top: 50px;
 
 &__btn {
 	cursor: pointer;
