@@ -12,11 +12,11 @@ h1 {
 
 	&__text-content {
 		position: absolute;
-		display: block;
-		top: 15vw; /* view width */ 
+		top: 15vw; 
 		left: 0;
 		width: 100%;
 		text-align: center;
+		letter-spacing: 2px;
 	}
 
 	&__subtitle {
@@ -27,15 +27,15 @@ h1 {
 		opacity: 0.8;
 
 		@mixin atSmall {
-			font-size: 2.5rem;
+			font-size: 2rem;
 		}
 
 		@mixin atMedium {
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 
 		@mixin atLarge {
-			font-size: 4.0rem;
+			font-size: 3.0rem;
 		}
 	}
 

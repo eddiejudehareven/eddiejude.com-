@@ -2,23 +2,23 @@
 
 	position: absolute;
 	left: 45vw;
-	top: -20vw;
+	top: -30vh;
 	transform: translateX(-30%);
 
 &__btn {
 	cursor: pointer;
-	width: 185px;
+	width: 100%;
 }
 
 &__name {
-	/*width: 300px;*/
+	width: 100%;
 	height: 40px;
 	margin: 0 0 1em 0;
 	border: 2px solid #945779;
 }
 
 &__email {
-	/*width: 300px;*/
+	width: 100%;
 	height: 40px;
 	margin: 0 0 1em 0;
 	border: 2px solid #945779;
@@ -27,7 +27,7 @@
 
 &__message {
 	height: 100px;
-	/*width: 300px;*/
+	width: 100%;
 	border: 2px solid #945779;
 
 }
