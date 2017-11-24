@@ -12,31 +12,38 @@ h1 {
 
 	&__text-content {
 		position: absolute;
-		top: 15vw; 
+		top: 10vw; 
 		left: 0;
 		width: 100%;
 		text-align: center;
-		letter-spacing: 2px;
 	}
 
 	&__subtitle {
 		text-align: center;
-		font-weight: 900;
-		font-size: 2rem;
-		margin: 0;
+		color: $mainGrey;
+		text-transform: uppercase;
 		opacity: 0.8;
+		margin: 0 auto;
+		padding: 8px;
+		font-size: 1.0rem;
+		max-width: 300px;
 
-		@mixin atSmall {
-			font-size: 2rem;
-		}
+	/*	@mixin atSmall {
+			font-size: 1rem;
+			max-width: 200px;
+		}*/
 
 		@mixin atMedium {
-			font-size: 2.5rem;
+			font-size: 2.0rem;
+			max-width: 300px;
 		}
 
 		@mixin atLarge {
-			font-size: 3.0rem;
+			font-size: 2.0rem;
+			max-width: 1000px;
+			border: none;
 		}
+
 	}
 
 	&__description {
