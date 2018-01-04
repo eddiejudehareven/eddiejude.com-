@@ -643,6 +643,8 @@ a:hover {
 .page-section { /* add margin between page sections */
 	padding: 1rem 0;
 	background-color: #e7f1fa;
+
+
 }
 @media (min-width: 800px) {
   .page-section {
@@ -671,6 +673,9 @@ a:hover {
 }
 .page-section--trainings--top-border {
   border-top: 10px solid #d05493;
+}
+.page-section--mediation {
+  border-top: #d05493;
 }
 .section-title { /* reusable block for all section titles*/
 	font-size: 1.8rem;
@@ -1255,6 +1260,12 @@ left: 20vw;
   height: 100px;
   width: 100%;
   border: 2px solid #945779;
+}
+#parallax-section {
+	
+}
+picture.mediation-parallax {
+	background-position: fixed; 
 }
 .footer-nav-bar ul {/* parent of li */
   margin: 0;

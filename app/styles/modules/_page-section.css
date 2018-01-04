@@ -30,4 +30,10 @@
 	border-top: 10px solid $mainPink;
 }
 }
+
+&--mediation {
+	border-top: $mainPink;
+}
+
+
 }
