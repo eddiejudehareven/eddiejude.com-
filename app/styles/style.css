@@ -1,3 +1,4 @@
+
 /* files like mixins, variables, and global rules must be listed before the pages that use their codes */
 @import "normalize.css";
 @import "modules/_variables";
@@ -27,6 +28,7 @@
 @import "modules/_contact-form";
 @import "modules/_mediation-section"; 
 @import "modules/_footer-navigation-bar"; 
+@import "modules/_packages";
 
 
 

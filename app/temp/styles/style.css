@@ -644,6 +644,9 @@ a:hover {
 	padding: 1rem 0;
 	background-color: #e7f1fa;
 
+/*&--mediation {
+	border-top: $mainPink;
+}*/ /* doesn't work. why?? */ 
 
 }
 @media (min-width: 800px) {
@@ -674,8 +677,9 @@ a:hover {
 .page-section--trainings--top-border {
   border-top: 10px solid #d05493;
 }
-.page-section--mediation {
-  border-top: #d05493;
+.page-section--trainings--packages {
+  background-color: #945779;
+  color: #000;
 }
 .section-title { /* reusable block for all section titles*/
 	font-size: 1.8rem;
@@ -1262,10 +1266,7 @@ left: 20vw;
   border: 2px solid #945779;
 }
 #parallax-section {
-	
-}
-picture.mediation-parallax {
-	background-position: fixed; 
+padding-bottom: 15px;
 }
 .footer-nav-bar ul {/* parent of li */
   margin: 0;

@@ -1,4 +1,5 @@
 .footer-nav-bar {
+}
 
 ul { /* parent of li */
 	margin: 0;
@@ -7,7 +8,7 @@ ul { /* parent of li */
 }
 
 li {
-	list-style: none;  gets rid of bullet points 
+	list-style: none;  /* gets rid of bullet points */ 
 	display: inline;
 	width: 15%;
 }
@@ -23,8 +24,6 @@ a { /*targets any links */
 
 	&:hover {
 		color: $mainGold;
-}
-
 }
 
 }
