@@ -25,10 +25,11 @@
 @import "modules/_social-icons";
 @import "modules/_mobile-nav";
 @import "modules/_mailing-list";
+@import "modules/_footer-navigation-bar";
 @import "modules/_contact-form";
-@import "modules/_mediation-section"; 
-@import "modules/_footer-navigation-bar"; 
-@import "modules/_packages";
+@import "modules/_mediation-section";
+@import "modules/_training-packages";
+
 
 
 

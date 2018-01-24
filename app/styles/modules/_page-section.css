@@ -30,15 +30,6 @@
 	border-top: 10px solid $mainPink;
 }
 
-&--packages {
-	background-color: $mainPurple;
-	color: #000;
 }
-
-}
-
-/*&--mediation {
-	border-top: $mainPink;
-}*/ /* doesn't work. why?? */ 
 
 }

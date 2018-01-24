@@ -1,3 +1,4 @@
+
 /* files like mixins, variables, and global rules must be listed before the pages that use their codes */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -526,7 +527,8 @@ a:hover {
 .headline--light {
   font-weight: 300;
 }
-.headline--no-top-margin {/* so no top margin appears on small screens */
+.headline--no-top-margin {
+  /* so no top margin appears on small screens */
   margin-top: 0;
 }
 .wrapper { /*wrapper ensures same padding, margin and max width for all parts of the page targeted. can be re-used*/
@@ -576,31 +578,38 @@ a:hover {
   display: table;
 }
 /* used to clear floats*/
-.row--gutters {/* gutters (space) between columns in row div */
+.row--gutters {
+  /* gutters (space) between columns in row div */
   margin-right: -50px;
 }
-.row--gutters > div {/*gutters (space) between any div's within gutters div */
+.row--gutters > div {
+  /*gutters (space) between any div's within gutters div */
   padding-right: 50px;
 }
-.row__bottom-margin-for-small {/* bottom margin between about me photo and text for smaller screens in single column layout */
+.row__bottom-margin-for-small {
+  /* bottom margin between about me photo and text for smaller screens in single column layout */
   margin-bottom: 1rem;
 }
 @media (min-width: 1010px) {
   .row__bottom-margin-for-large {
     margin-bottom: 0rem;
   }
-  .row__medium-4 {/* column layout for the about me section picture/2 column layout*/
+  .row__medium-4 {
+    /* column layout for the about me section picture/2 column layout*/
     float: left;
-    width: 33.3%;/*percentages of how much space each column takes up on the page*/
+    width: 33.3%;
+    /*percentages of how much space each column takes up on the page*/
   }
   .row__medium-4--larger {
     width: 37%;
   }
-  .row__medium-3 {/* column layout for the FAQ sections/3 column layout */
+  .row__medium-3 {
+    /* column layout for the FAQ sections/3 column layout */
     float: left;
     width: 33.3%;
   }
-  .row__medium-8 {/* column layout for the about me section text/2 column layout*/
+  .row__medium-8 {
+    /* column layout for the about me section text/2 column layout*/
     float: left;
     width: 66.66%;
   }
@@ -613,10 +622,12 @@ a:hover {
   .row--equal-height-at-medium {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;/* code to create flexbox/display columns at equal height */
+    display: flex;
+    /* code to create flexbox/display columns at equal height */
   }
 }
-.row--equal-height-at-medium > div {/* selects all children divs so all columns become same height */
+.row--equal-height-at-medium > div {
+  /* selects all children divs so all columns become same height */
   float: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -644,10 +655,6 @@ a:hover {
 	padding: 1rem 0;
 	background-color: #e7f1fa;
 
-/*&--mediation {
-	border-top: $mainPink;
-}*/ /* doesn't work. why?? */ 
-
 }
 @media (min-width: 800px) {
   .page-section {
@@ -670,16 +677,13 @@ a:hover {
     padding-top: 1rem 0;
   }
 }
-.page-section--trainings {/* background color for section */
+.page-section--trainings {
+  /* background color for section */
   background-color: #945779;
   color: #000;
 }
 .page-section--trainings--top-border {
   border-top: 10px solid #d05493;
-}
-.page-section--trainings--packages {
-  background-color: #945779;
-  color: #000;
 }
 .section-title { /* reusable block for all section titles*/
 	font-size: 1.8rem;
@@ -702,17 +706,20 @@ a:hover {
 .generic-content-container p {
   font-weight: 300;
   line-height: 1.25;
-  margin: 0 0 1rem 0;/* css shorthand for margins - goes in clockwise fashion */
+  margin: 0 0 1rem 0;
+  /* css shorthand for margins - goes in clockwise fashion */
   font-size: 1rem;
 }
 /* default font size for browser - does not need to written */
 @media (min-width: 530px) {
   .generic-content-container p {
-    font-size: 1rem;/*font size change once screens are larger than small */
+    font-size: 1rem;
+    /*font size change once screens are larger than small */
     line-height: 1.65;
   }
 }
-.generic-content-container p a {/* descendent selector targets all links within a paragraph */
+.generic-content-container p a {
+  /* descendent selector targets all links within a paragraph */
   font-weight: 700;
 }
 .faq-title { /*you could nest a rule where any strong tags carry a different font weight */
@@ -761,14 +768,16 @@ a:hover {
 }
 /*creates bottom margin for single stacked columns on small screens */
 @media (min-width: 800px) {
-  .training-block {/* ensures no bottom margin on larger screens */
+  .training-block {
+    /* ensures no bottom margin on larger screens */
     margin-bottom: 20px;
   }
 }
 .training-block--no-bottom-margin-for-small {
   margin-bottom: 0;
 }
-.training-block__title {/* training titles */
+.training-block__title {
+  /* training titles */
   text-align: center;
   color: #242424;
   opacity: .8;
@@ -789,7 +798,8 @@ a:hover {
     display: block;
     background-color: black;
     position: absolute;
-    padding: .5rem 0;/* so that the margin on the paragraph isn't visibly portruding out of the container div */
+    padding: .5rem 0;
+    /* so that the margin on the paragraph isn't visibly portruding out of the container div */
     width: 100%;
   }
 }
@@ -816,7 +826,8 @@ a:hover {
 	padding: 10px 0;
 	transition: background-color .3s ease-out;
 }
-.site-header--arrow--displayed {/* positioning for when js displays menu */
+.site-header--arrow--displayed {
+  /* positioning for when js displays menu */
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
 }
@@ -887,8 +898,13 @@ a:hover {
 }
 /*&--arrow-tab::after { /* makes triangle */
 @media (min-width: 800px) {
-  .site-header {/* we're moving the black bar to its own element! *//*background-color: black;*//* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
-    position: fixed;/* sticky header *//*&--dark {
+  .site-header {
+    /* we're moving the black bar to its own element! */
+    /*background-color: black;*/
+    /* install NPM postcss-hexrgba to be able to use saved variables in rgba code */
+    position: fixed;
+    /* sticky header */
+    /*&--dark {
 	background-color: black;
 	}*/
   }
@@ -944,7 +960,9 @@ a:hover {
     position: absolute;
     left: 10px;
     top: 5px;
-    border: 2px solid #e8e9ea;/* how do you space the border? *//*width: 15vw;*/
+    border: 2px solid #e8e9ea;
+    /* how do you space the border? */
+    /*width: 15vw;*/
     padding: 20px;
     text-align: center;
     font-weight: 900;
@@ -993,7 +1011,8 @@ a:hover {
   display: block;
 }
 /* makes content look bigger than it normally does/zoom out effect */
-.nav-bar--pull-right {/* modifier for nav bar items that should float right */
+.nav-bar--pull-right {
+  /* modifier for nav bar items that should float right */
   float: left;
 }
 @media (min-width: 530px) {
@@ -1005,7 +1024,8 @@ a:hover {
   display: none;
 }
 .nav-bar--pull-right li {
-  list-style: none;/* gets rid of bullet points */
+  list-style: none;
+  /* gets rid of bullet points */
   display: inline-list-item;
   text-align: right;
 }
@@ -1032,7 +1052,8 @@ a:hover {
   position: relative;
   left: 25%;
   width: 50%;
-  text-align: center;/*transform: translateY(-30%);*/
+  text-align: center;
+  /*transform: translateY(-30%);*/
 }
 .reveal-item {
 	opacity: 0;
@@ -1071,10 +1092,13 @@ a:hover {
 }
 .modal__inner {
   position: absolute;
-  width: 100%;/* so width is not shrunken by position aboslute */
-  top: 40%;/* pushes div down 50% of the page */
+  width: 100%;
+  /* so width is not shrunken by position aboslute */
+  top: 40%;
+  /* pushes div down 50% of the page */
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);/* pushes it back up 50% */
+          transform: translateY(-50%);
+  /* pushes it back up 50% */
 }
 .modal__description {
   text-align: center;
@@ -1083,19 +1107,24 @@ a:hover {
   line-height: 1.65;
 }
 .modal__close {
-  position: absolute;/* to move X to the top right position */
-  top: 0px;/* to move X to the top right position */
+  position: absolute;
+  /* to move X to the top right position */
+  top: 0px;
+  /* to move X to the top right position */
   right: 15px;
   font-size: 2rem;
   -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);/* stretches X out horizontally */
+          transform: scaleX(1.2);
+  /* stretches X out horizontally */
   -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;/* stretches X out */
+          transform-origin: 100% 0;
+  /* stretches X out */
   color: #945779;
   cursor: pointer;
 }
 /* makes mouse turn to a pointer */
-.modal__close:hover {/* X changes color when hovered over */
+.modal__close:hover {
+  /* X changes color when hovered over */
   color: #eeab26;
 }
 .body__modal__is-visible {
@@ -1119,22 +1148,26 @@ a:hover {
   display: none;
 }
 .mobile-nav__content--is-visible {
-  display: block;/*top: 15px;*/
+  display: block;
+  /*top: 15px;*/
   right: 0;
   z-index: 99;
 }
 .mobile-nav__content--overlay {
-  height: 100%;/*width: 0;*/
+  height: 100%;
+  /*width: 0;*/
   position: fixed;
   left: 0;
   top: 0;
   background-color: black;
   opacity: .9;
-  overflow-x: hidden;/*disables horizontal scrolling*/
+  overflow-x: hidden;
+  /*disables horizontal scrolling*/
   transition: 0.5s;
 }
 .mobile-nav li {
-  list-style: none;/* gets rid of bullet points */
+  list-style: none;
+  /* gets rid of bullet points */
   display: inline-list-item;
   text-align: center;
 }
@@ -1152,7 +1185,8 @@ a:hover {
   z-index: 10;
   cursor: pointer;
 }
-.mobile-nav__menu-icon__middle {/*CSS for the 3 line sandwich nav symbol */
+.mobile-nav__menu-icon__middle {
+  /*CSS for the 3 line sandwich nav symbol */
   position: absolute;
   top: 8px;
   left: 0;
@@ -1160,11 +1194,14 @@ a:hover {
   height: 3px;
   right: 10px;
   background-color: #945779;
-  transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
+  transition: all .3s ease-out;
+  /* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;/* changes the centre origin of the line from middle to right side */
+          transform-origin: 0 50%;
+  /* changes the centre origin of the line from middle to right side */
 }
-.mobile-nav__menu-icon::before {/*CSS for the 3 line sandwich nav symbol. &:: to avoid needing multiple divs in html file (top, bottom, middle) */
+.mobile-nav__menu-icon::before {
+  /*CSS for the 3 line sandwich nav symbol. &:: to avoid needing multiple divs in html file (top, bottom, middle) */
   content: "";
   position: absolute;
   top: 0px;
@@ -1173,11 +1210,14 @@ a:hover {
   height: 3px;
   right: 10px;
   background-color: #945779;
-  transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
+  transition: all .3s ease-out;
+  /* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;/* changes the centre origin of the line from middle to right side */
+          transform-origin: 0 50%;
+  /* changes the centre origin of the line from middle to right side */
 }
-.mobile-nav__menu-icon::after {/*CSS for the 3 line sandwich nav symbol */
+.mobile-nav__menu-icon::after {
+  /*CSS for the 3 line sandwich nav symbol */
   content: "";
   position: absolute;
   bottom: 0px;
@@ -1186,9 +1226,11 @@ a:hover {
   height: 3px;
   right: 10px;
   background-color: #945779;
-  transition: all .3s ease-out;/* line transitions with ease out effect at .3seconds  */
+  transition: all .3s ease-out;
+  /* line transitions with ease out effect at .3seconds  */
   -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;/* changes the centre origin of the line from middle to right side */
+          transform-origin: 0 50%;
+  /* changes the centre origin of the line from middle to right side */
 }
 @media (min-width: 800px) {
   .mobile-nav__menu-icon {
@@ -1203,7 +1245,8 @@ a:hover {
 .mobile-nav__menu-icon--close-x .mobile-nav__menu-icon__middle {
   opacity: 0;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);/* shrinks width from 100% down to 0 (nothing) therefore will shrink and fade */
+          transform: scaleX(0);
+  /* shrinks width from 100% down to 0 (nothing) therefore will shrink and fade */
 }
 .mobile-nav__menu-icon--close-x::after {
   color: #945779;
@@ -1232,6 +1275,35 @@ left: 20vw;
 }
 .mailing-list__btn {
   padding: 0rem .5rem;
+}
+.footer-nav-bar {
+}
+ul { /* parent of li */
+	margin: 0;
+	padding-left: 40px; /* clears floats */
+}
+ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+li {
+	list-style: none;  /* gets rid of bullet points */ 
+	display: inline;
+	width: 15%;
+}
+a { /*targets any links */
+	position: relative;
+	color: #FFF;
+	font-size: 0.8rem;
+	text-decoration: none; /* gets rid of underlines */
+	display: block; /* turns links into block element */
+	padding: 5px 5px;
+	bottom: 1vw;
+
+}
+a:hover {
+  color: #eeab26;
 }
 .contact-form {
 
@@ -1265,36 +1337,27 @@ left: 20vw;
   width: 100%;
   border: 2px solid #945779;
 }
-#parallax-section {
+/*#parallax-section {
 padding-bottom: 15px;
+}*/
+.mediation-parallax picture img {
+	width: 100%;
+
 }
-.footer-nav-bar ul {/* parent of li */
-  margin: 0;
-  padding-left: 40px;/* clears floats */
+.packages-block {
+	background-color: #e7f1fa;
+	border-top: 10px solid #945779;
+	margin-top: 0px;
 }
-.footer-nav-bar ul::after {
-  content: "";
-  clear: both;
-  display: table;
+.training-block--packages {
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  text-align: left;
 }
-.footer-nav-bar li {
-  list-style: none;
-  gets rid of bullet points 
-	display: inline;
-  width: 15%;
+.training-block span {
+  float: right;
 }
-.footer-nav-bar a {/*targets any links */
-  position: relative;
-  color: #FFF;
-  font-size: 0.8rem;
-  text-decoration: none;/* gets rid of underlines */
-  display: block;/* turns links into block element */
-  padding: 5px 5px;
-  bottom: 1vw;
-}
-.footer-nav-bar a:hover {
-  color: #eeab26;
-} 
+
 
 
 
