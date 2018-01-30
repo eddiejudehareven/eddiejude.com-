@@ -1050,9 +1050,10 @@ a:hover {
 .contact__text-content {
   background-color: #eeab26;
   position: relative;
-  left: 25%;
-  width: 50%;
+  max-width: 500px;
+  margin: 0 auto;
   text-align: center;
+  padding-bottom: 5px;
   /*transform: translateY(-30%);*/
 }
 .reveal-item {
@@ -1337,13 +1338,26 @@ a:hover {
   width: 100%;
   border: 2px solid #945779;
 }
-/*#parallax-section {
-padding-bottom: 15px;
-}*/
-.mediation-parallax picture img {
+.mediation__image {
 	width: 100%;
-
+	z-index: -999;
+	position: relative;
 }
+.mediation-section-content-container {
+	background-color: rgba(000, 0, 0, .5);
+	position: absolute;
+	color: #FFF;
+	padding: 0px 40px;
+}
+.training-block--mediation {
+	float: right;
+	width: 33.333%;
+}
+/*
+li {
+	display: block;
+}
+ */
 .packages-block {
 	background-color: #e7f1fa;
 	border-top: 10px solid #945779;

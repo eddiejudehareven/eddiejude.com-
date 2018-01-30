@@ -1,10 +1,27 @@
-/*#parallax-section {
-padding-bottom: 15px;
-}*/
-
-.mediation-parallax picture img {
+.mediation__image {
 	width: 100%;
-
+	z-index: -999;
+	position: relative;
 }
+
+.mediation-section-content-container {
+	background-color: rgba(000, 0, 0, .5);
+	position: absolute;
+	color: #FFF;
+	padding: 0px 40px;
+}
+
+.training-block--mediation {
+	float: right;
+	width: 33.333%;
+}
+/*
+li {
+	display: block;
+}
+ */
+
+
+
 
 
