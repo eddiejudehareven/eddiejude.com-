@@ -7,10 +7,9 @@
 &__text-content {
 	background-color: $mainGold;
 	position: relative;
-	max-width: 500px;
-	margin: 0 auto;
+	left: 25%;
+	width: 50%;
 	text-align: center;
-	padding-bottom: 5px;
 	/*transform: translateY(-30%);*/
 }
 }

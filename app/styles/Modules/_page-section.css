@@ -1,0 +1,32 @@
+.page-section { /* add margin between page sections */
+	padding: 1rem 0;
+	background-color: $mainBlue;
+
+@mixin atMedium {
+	background-color: #FFF;
+}
+
+&--no-padding-top-until-medium {
+	padding-top: 0;
+
+@mixin atMedium {
+	padding-top: 1rem 0;
+}
+}
+
+&--no-padding-top-until-large {
+	padding-top: 0;
+
+@mixin atLarge {
+	padding-top: 1rem 0;
+}
+}
+
+&--trainings {  /* background color for section */
+	background-color: $mainBlue;
+	color: #000;
+	border-top: 10px solid $darkBlue;
+	border-bottom: 10px solid $darkBlue;
+}
+
+}

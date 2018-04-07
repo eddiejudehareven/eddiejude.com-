@@ -655,6 +655,7 @@ a:hover {
 	padding: 1rem 0;
 	background-color: #e7f1fa;
 
+
 }
 @media (min-width: 800px) {
   .page-section {
@@ -684,6 +685,10 @@ a:hover {
 }
 .page-section--trainings--top-border {
   border-top: 10px solid #d05493;
+}
+.page-section--trainings--packages {
+  background-color: #945779;
+  color: #000;
 }
 .section-title { /* reusable block for all section titles*/
 	font-size: 1.8rem;
@@ -721,6 +726,13 @@ a:hover {
 .generic-content-container p a {
   /* descendent selector targets all links within a paragraph */
   font-weight: 700;
+}
+.generic-content-container__testimonials p {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 1rem 0 1rem 0;
+  line-height: 1.25;
+  font-style: italic;
 }
 .faq-title { /*you could nest a rule where any strong tags carry a different font weight */
 	font-weight: 400;
@@ -1050,10 +1062,9 @@ a:hover {
 .contact__text-content {
   background-color: #eeab26;
   position: relative;
-  max-width: 500px;
-  margin: 0 auto;
+  left: 25%;
+  width: 50%;
   text-align: center;
-  padding-bottom: 5px;
   /*transform: translateY(-30%);*/
 }
 .reveal-item {
@@ -1277,35 +1288,6 @@ left: 20vw;
 .mailing-list__btn {
   padding: 0rem .5rem;
 }
-.footer-nav-bar {
-}
-ul { /* parent of li */
-	margin: 0;
-	padding-left: 40px; /* clears floats */
-}
-ul::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-li {
-	list-style: none;  /* gets rid of bullet points */ 
-	display: inline;
-	width: 15%;
-}
-a { /*targets any links */
-	position: relative;
-	color: #FFF;
-	font-size: 0.8rem;
-	text-decoration: none; /* gets rid of underlines */
-	display: block; /* turns links into block element */
-	padding: 5px 5px;
-	bottom: 1vw;
-
-}
-a:hover {
-  color: #eeab26;
-}
 .contact-form {
 
 	/*position: absolute;
@@ -1338,38 +1320,69 @@ a:hover {
   width: 100%;
   border: 2px solid #945779;
 }
-.mediation__image {
-	width: 100%;
-	z-index: -999;
-	position: relative;
+.footer-nav-bar ul {
+  /* parent of li */
+  margin: 0;
+  padding-left: 40px;
+  /* clears floats */
 }
-.mediation-section-content-container {
-	background-color: rgba(000, 0, 0, .5);
-	position: absolute;
-	color: #FFF;
-	padding: 0px 40px;
+.footer-nav-bar ul::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-.training-block--mediation {
-	float: right;
-	width: 33.333%;
+.footer-nav-bar li {
+  list-style: none;
+  /* gets rid of bullet points */
+  display: inline;
+  width: 15%;
 }
-/*
-li {
-	display: block;
+.footer-nav-bar a {
+  /*targets any links */
+  position: relative;
+  color: #FFF;
+  font-size: 0.8rem;
+  text-decoration: none;
+  /* gets rid of underlines */
+  display: block;
+  /* turns links into block element */
+  padding: 5px 5px;
+  bottom: 1vw;
 }
- */
-.packages-block {
-	background-color: #e7f1fa;
-	border-top: 10px solid #945779;
-	margin-top: 0px;
+.footer-nav-bar a:hover {
+  color: #eeab26;
 }
-.training-block--packages {
-  box-shadow: 0px 2px 2px rgba(0,0,0,0.15);
-  border-radius: 4px;
-  text-align: left;
+.packages {
+	
 }
-.training-block span {
-  float: right;
+.testimonial_slider {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 14px;
+}
+#left-arrow {
+    position: absolute;
+    left: 30px;
+    font-size: 22px;
+    cursor: pointer;
+}
+#right-arrow {
+    position: absolute;
+    right: 30px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.slide.active {
+    display: block;
 }
 
 
