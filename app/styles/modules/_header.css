@@ -1,62 +1,63 @@
-h1 {
-	margin: 0 !important;
+.header {
+	border-bottom: 10px solid $mainOrange;
+	position: relative;
+
+&__image {
+	display: block;
+	width: 100%;
 }
 
-.header {
-	border-bottom: 10px solid $mainPurple;
+ &__text-content {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-150%);
+	left: 0;
+	width: 100%;
+	text-align: center;
 
-	&__image {
-		display: block;
-		width: 100%;
+@mixin atSmall {
+	transform: translateY(-100%);
 	}
 
-	&__text-content {
-		position: absolute;
-		top: 10vw; 
-		left: 0;
-		width: 100%;
-		text-align: center;
+@mixin atMedium {
+	transform: translateY(-120%);
+}
+
+@mixin atLarge {
+	transform: translateY(-60%);
+}
+}
+
+&__subtitle {
+	font-weight: 900;
+	font-size: 2rem;
+	margin: 0;
+	opacity: 0.8;
+
+	@mixin atSmall {
+		font-size: 2.5rem;
 	}
 
-	&__subtitle {
-		text-align: center;
-		color: $mainGrey;
-		text-transform: uppercase;
-		opacity: 0.8;
-		margin: 0 auto;
-		padding: 8px;
-		font-size: 1.0rem;
-		max-width: 300px;
-
-	/*	@mixin atSmall {
-			font-size: 1rem;
-			max-width: 200px;
-		}*/
-
-		@mixin atMedium {
-			font-size: 2.0rem;
-			max-width: 300px;
-		}
-
-		@mixin atLarge {
-			font-size: 2.0rem;
-			max-width: 1000px;
-			border: none;
-		}
-
+	@mixin atMedium {
+		font-size: 3rem;
 	}
 
-	&__description {
-		color: #FFF;
-		font-size: 1.1rem;
-		font-weight: 100;
-		text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-		max-width: 30rem;
-		margin-left: auto;
-		margin-right: auto;
-
-		@mixin atSmall {
-			font-size: 1.875rem;
-		}	
+	@mixin atLarge {
+		font-size: 4.0rem;
 	}
+}
+
+&__description {
+	color: #FFF;
+	font-size: 1.1rem;
+	font-weight: 100;
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+	max-width: 30rem;
+	margin-left: auto;
+	margin-right: auto;
+
+@mixin atSmall {
+	font-size: 1.875rem;
+}	
+}
 }

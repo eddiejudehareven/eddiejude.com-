@@ -15,10 +15,6 @@
 	padding-right: 40px;
 
 	}
-
-	&--narrow {
-		max-width: 470px;
-	}
 }
 
 &--no-padding-until-large { 

@@ -14,7 +14,6 @@
 	@media (min-width: 1010px) {
 		@mixin-content;
 	}
-}
 
 @define-mixin clearfix {
 
@@ -22,11 +21,6 @@
 		content: "";
 		clear: both;
 		display: table;
-	}
-
-@define-mixin atLandscape {
-	@media (min-height: 400px){
-		@mixin-content; 
 	}
 }
 

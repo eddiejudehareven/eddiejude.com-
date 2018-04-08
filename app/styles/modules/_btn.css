@@ -1,10 +1,14 @@
 
 .btn {
-	background-color: $mainPurple; 
+	background-color: $mainMagenta; 
 	color: #FFF;
 	text-decoration: none;
 	padding: .75rem 1.2rem;
 	display: inline-block;
+
+&--orange {
+	background-color: $mainOrange;
+}
 
 &--orange-footer {
 	float: center;
@@ -12,12 +16,10 @@
 }
 
 &--large {
-	display: none;
+	padding: 1.2rem 1.5rem;
 
-@mixin atMedium {
-	display: inline-block;
-	padding: 1.4rem 2rem;
-	font-size: 1rem;
+@mixin atSmall {
+	font-size: 1.25rem;
 }
 }
 }

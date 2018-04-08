@@ -1,0 +1,77 @@
+html {
+    box-sizing: border-box;
+    background:#ffc600;
+    font-family:'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  body {
+    margin: 0;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .panels {
+    min-height:100vh;
+    overflow: hidden;
+    display: flex; /* flex container */ 
+  }
+
+  .panel {
+    background:#6B0F9C;
+    box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+    color:white;
+    text-align: center;
+    align-items:center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    background-size:cover;
+    background-position:center;
+    flex: 1; /* evenly distributes extra room */ 
+    justify-content: center;
+    align-items: center;
+    display: flex; /* now also becomes flex container */ 
+    flex-direction: column;
+  }
+
+  .panel-1 { background-image:url(../flex-gallery/images/mediation-feeling-board-large-square.jpg); }
+  .panel-2 { background-image:url(../flex-gallery/images/breather-163393-unsplash.jpg); }
+  .panel-3 { background-image:url(../flex-gallery/images/classroom-2.jpg); }
+  .panel-4 { background-image:url(../flex-gallery/images/twenty20_431126b7-c700-49de-a862-86979f838ab3.jpg); }
+  
+  /* file:///Users/EddieJude/Desktop/Code/flex-gallery/images/breather-163393-unsplash.jpg
+
+  ../flex-gallery/images/twenty20_57d32f0c-7eb6-4c39-8157-9448ce8f19e7.jpg */
+/* Flex Items */ 
+  .panel > * { /* targets children of .panel */
+    margin:0;
+    width: 100%;
+    transition:transform 0.5s;
+    flex: 1 0 auto; /* moves the text */ 
+    display: flex; /* brings text to the left */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .panel > *:first-child { transform: translateY(-100%); } /* hides the (top) first children */
+  .panel.open-active > *:first-child { transform: translateY(0); } /* when active the text of the panel slides down or up */
+  .panel > *:last-child { transform: translateY(100%); } /* hides the (bottom) last child */
+  .panel.open-active > *:last-child { transform: translateY(0); }
+
+.panel p {
+    text-transform: uppercase;
+    text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+  }
+
+.panel.open {
+    flex: 5; /* takes five times the amount of extra room as the other panels */
+    font-size: 20px;
+  }
