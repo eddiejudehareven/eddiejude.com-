@@ -481,8 +481,7 @@ a:hover {
 }
 .btn--orange-footer {
   float: center;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  transform: translateY(-30%);
 }
 .btn--large {
   display: none;
@@ -620,7 +619,6 @@ a:hover {
 /* begin equal height rules so all columns display equal height */
 @media (min-width: 800px) {
   .row--equal-height-at-medium {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     /* code to create flexbox/display columns at equal height */
@@ -629,20 +627,17 @@ a:hover {
 .row--equal-height-at-medium > div {
   /* selects all children divs so all columns become same height */
   float: none;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 @media (min-width: 1010px) {
   .row--equal-height-at-large {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 .row--equal-height-at-large > div {
   float: none;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -828,8 +823,7 @@ a:hover {
 }
 .site-header--arrow--displayed {
   /* positioning for when js displays menu */
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
 }
 .site-header--arrow {
   position: absolute;
@@ -923,8 +917,7 @@ a:hover {
   .site-header__btn-container {
     display: block;
     float: right;
-    -webkit-transform: translateY(-150%);
-            transform: translateY(-150%);
+    transform: translateY(-150%);
   }
 }
 /*&--arrow-tab {
@@ -949,9 +942,7 @@ a:hover {
   font-size: 1rem;
   opacity: 0.9;
   z-index: 9;
-  transition: -webkit-transform .5 ease-out;
   transition: transform .5 ease-out;
-  transition: transform .5 ease-out, -webkit-transform .5 ease-out;
 }
 /* so title smoothly transitions to fade out */
 @media (min-width: 800px) {
@@ -984,8 +975,7 @@ a:hover {
 @media (min-width: 800px) {
   .nav-bar {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     padding-top: 0;
   }
 }
@@ -1073,23 +1063,20 @@ a:hover {
 	right: 0;
 	opacity: 0; /* hides modal overlay until clicked */ 
 	visibility: hidden; /* hides modal overlay until clicked */ 
-	-webkit-transform: scale(1.2); 
-	        transform: scale(1.2);
+	transform: scale(1.2);
 	transition: all .3 ease-out;
 }
 .modal__is-visible {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   max-width: 100%;
   margin: auto;
 }
 .modal__modal__AskMe__is-visible {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 .modal__inner {
   position: absolute;
@@ -1097,8 +1084,7 @@ a:hover {
   /* so width is not shrunken by position aboslute */
   top: 40%;
   /* pushes div down 50% of the page */
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   /* pushes it back up 50% */
 }
 .modal__description {
@@ -1114,11 +1100,9 @@ a:hover {
   /* to move X to the top right position */
   right: 15px;
   font-size: 2rem;
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
+  transform: scaleX(1.2);
   /* stretches X out horizontally */
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
+  transform-origin: 100% 0;
   /* stretches X out */
   color: #945779;
   cursor: pointer;
@@ -1197,8 +1181,7 @@ a:hover {
   background-color: #945779;
   transition: all .3s ease-out;
   /* line transitions with ease out effect at .3seconds  */
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+  transform-origin: 0 50%;
   /* changes the centre origin of the line from middle to right side */
 }
 .mobile-nav__menu-icon::before {
@@ -1213,8 +1196,7 @@ a:hover {
   background-color: #945779;
   transition: all .3s ease-out;
   /* line transitions with ease out effect at .3seconds  */
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+  transform-origin: 0 50%;
   /* changes the centre origin of the line from middle to right side */
 }
 .mobile-nav__menu-icon::after {
@@ -1229,8 +1211,7 @@ a:hover {
   background-color: #945779;
   transition: all .3s ease-out;
   /* line transitions with ease out effect at .3seconds  */
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+  transform-origin: 0 50%;
   /* changes the centre origin of the line from middle to right side */
 }
 @media (min-width: 800px) {
@@ -1240,19 +1221,16 @@ a:hover {
 }
 .mobile-nav__menu-icon--close-x::before {
   z-index: 999;
-  -webkit-transform: rotate(45deg) scaleX(1.25);
-          transform: rotate(45deg) scaleX(1.25);
+  transform: rotate(45deg) scaleX(1.25);
 }
 .mobile-nav__menu-icon--close-x .mobile-nav__menu-icon__middle {
   opacity: 0;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   /* shrinks width from 100% down to 0 (nothing) therefore will shrink and fade */
 }
 .mobile-nav__menu-icon--close-x::after {
   color: #945779;
-  -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-          transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+  transform: rotate(-45deg) scaleX(1.25) translateY(1px);
   z-index: 99;
 }
 .mailing-list {
