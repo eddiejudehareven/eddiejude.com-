@@ -1255,33 +1255,36 @@ left: 20vw;
 .mailing-list__btn {
   padding: 0rem .5rem;
 }
-.footer-nav-bar {
+.footer-nav-bar ul {
+  /* parent of li */
+  margin: 0;
+  padding-left: 40px;
+  /* clears floats */
 }
-ul { /* parent of li */
-	margin: 0;
-	padding-left: 40px; /* clears floats */
-}
-ul::after {
+.footer-nav-bar ul::after {
   content: "";
   clear: both;
   display: table;
 }
-li {
-	list-style: none;  /* gets rid of bullet points */ 
-	display: inline;
-	width: 15%;
+.footer-nav-bar li {
+  list-style: none;
+  /* gets rid of bullet points */
+  display: inline;
+  width: 15%;
 }
-a { /*targets any links */
-	position: relative;
-	color: #FFF;
-	font-size: 0.8rem;
-	text-decoration: none; /* gets rid of underlines */
-	display: block; /* turns links into block element */
-	padding: 5px 5px;
-	bottom: 1vw;
-
+.footer-nav-bar a {
+  /*targets any links */
+  position: relative;
+  color: #FFF;
+  font-size: 0.8rem;
+  text-decoration: none;
+  /* gets rid of underlines */
+  display: block;
+  /* turns links into block element */
+  padding: 5px 5px;
+  bottom: 1vw;
 }
-a:hover {
+.footer-nav-bar a:hover {
   color: #eeab26;
 }
 .contact-form {
@@ -1316,26 +1319,6 @@ a:hover {
   width: 100%;
   border: 2px solid #945779;
 }
-.mediation__image {
-	width: 100%;
-	z-index: -999;
-	position: relative;
-}
-.mediation-section-content-container {
-	background-color: rgba(000, 0, 0, .5);
-	position: absolute;
-	color: #FFF;
-	padding: 0px 40px;
-}
-.training-block--mediation {
-	float: right;
-	width: 33.333%;
-}
-/*
-li {
-	display: block;
-}
- */
 .packages-block {
 	background-color: #e7f1fa;
 	border-top: 10px solid #945779;
